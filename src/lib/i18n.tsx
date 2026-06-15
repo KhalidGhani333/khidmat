@@ -62,9 +62,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const sl = (typeof window !== "undefined" && localStorage.getItem("lang")) as Lang | null;
-    const st = (typeof window !== "undefined" && localStorage.getItem("theme")) as Theme | null;
     if (sl) setLangState(sl);
-    if (st) setTheme(st);
   }, []);
 
   useEffect(() => {
