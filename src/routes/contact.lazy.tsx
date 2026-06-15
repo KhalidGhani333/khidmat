@@ -1,7 +1,8 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import { Phone, Mail, MessageCircle, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin, Clock, Send } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { useApp, CONTACT } from "@/lib/i18n";
+import { useState } from "react";
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
@@ -12,6 +13,19 @@ export const Route = createLazyFileRoute("/contact")({
 
 function ContactPage() {
   const { t } = useApp();
+  const [formState, setFormState] = useState({ name: "", email: "", phone: "", service: "", message: "" });
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setSending(true);
+    const msg = `Name: ${formState.name}%0AEmail: ${formState.email}%0APhone: ${formState.phone}%0AService: ${formState.service}%0AMessage: ${formState.message}`;
+    window.open(`https://wa.me/966536508959?text=${msg}`, "_blank");
+    setSending(false);
+    setSent(true);
+    setFormState({ name: "", email: "", phone: "", service: "", message: "" });
+  }
 
   const infoCards = [
     { icon: Phone, label: t("info.phone"), value: CONTACT.phone, href: `tel:${CONTACT.phone.replace(/\s/g, "")}` },
@@ -82,6 +96,89 @@ function ContactPage() {
                 </div>
               </div>
             </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CONTACT FORM */}
+      <section className="bg-muted/40 py-20 md:py-28">
+        <div className="container-luxe max-w-2xl mx-auto">
+          <Reveal className="text-center mb-12">
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("contact.form.title")}</span>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-black">{t("contact.form.sub")}</h2>
+          </Reveal>
+          <Reveal>
+            <form onSubmit={handleSubmit} className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-xl shadow-black/5 space-y-5">
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t("contact.form.name")}</label>
+                  <input
+                    required
+                    value={formState.name}
+                    onChange={e => setFormState(s => ({ ...s, name: e.target.value }))}
+                    className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-gold focus:outline-none transition"
+                    placeholder="e.g. Ahmed Al-Rashidi"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t("contact.form.phone")}</label>
+                  <input
+                    required
+                    value={formState.phone}
+                    onChange={e => setFormState(s => ({ ...s, phone: e.target.value }))}
+                    className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-gold focus:outline-none transition"
+                    placeholder="+966 5x xxx xxxx"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t("contact.form.email")}</label>
+                <input
+                  type="email"
+                  value={formState.email}
+                  onChange={e => setFormState(s => ({ ...s, email: e.target.value }))}
+                  className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-gold focus:outline-none transition"
+                  placeholder="you@example.com"
+                />
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t("contact.form.service")}</label>
+                <select
+                  value={formState.service}
+                  onChange={e => setFormState(s => ({ ...s, service: e.target.value }))}
+                  className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground focus:border-gold focus:outline-none transition"
+                >
+                  <option value="">— Select a service —</option>
+                  <option value="Marble Floor Polishing">Marble Floor Polishing</option>
+                  <option value="Tile Deep Cleaning">Tile Deep Cleaning</option>
+                  <option value="Granite & Stone Polishing">Granite & Stone Polishing</option>
+                  <option value="Bathroom & Kitchen Restoration">Bathroom & Kitchen Restoration</option>
+                  <option value="Commercial Space">Commercial Space</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t("contact.form.message")}</label>
+                <textarea
+                  required
+                  rows={4}
+                  value={formState.message}
+                  onChange={e => setFormState(s => ({ ...s, message: e.target.value }))}
+                  className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-gold focus:outline-none transition resize-none"
+                  placeholder="Describe your floor type, area size, and any specific concerns..."
+                />
+              </div>
+              {sent && (
+                <p className="text-sm font-medium text-green-600">{t("contact.form.success")}</p>
+              )}
+              <button
+                type="submit"
+                disabled={sending}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-sm font-semibold text-gold-foreground shadow-lg shadow-gold/20 transition hover:scale-105 disabled:opacity-60"
+              >
+                <Send className="h-4 w-4" />
+                {sending ? t("contact.form.sending") : t("contact.form.submit")}
+              </button>
+            </form>
           </Reveal>
         </div>
       </section>

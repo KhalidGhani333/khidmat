@@ -38,8 +38,11 @@ const dict: Record<string, { en: string; ar: string }> = {
 
   "services.label": { en: "WHAT WE DO", ar: "ماذا نقدم" },
   "services.title": { en: "Our Core Services", ar: "خدماتنا الأساسية" },
+  "transform.label": { en: "BEFORE & AFTER", ar: "قبل وبعد" },
   "transform.title": { en: "See the Transformation", ar: "شاهد التحول" },
+  "gallery.label": { en: "OUR WORK", ar: "أعمالنا" },
   "gallery.title": { en: "Our Work Gallery", ar: "معرض أعمالنا" },
+  "why.label": { en: "OUR ADVANTAGE", ar: "ميزتنا" },
   "why.title": { en: "Why Choose Us", ar: "لماذا تختارنا" },
   "testi.title": { en: "What Clients Say", ar: "آراء عملائنا" },
   "finalcta.title": { en: "Ready to Transform Your Space?", ar: "هل أنت مستعد لتحويل مساحتك؟" },
@@ -198,6 +201,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const sl = (typeof window !== "undefined" && localStorage.getItem("lang")) as Lang | null;
     if (sl) setLangState(sl);
+    const st = typeof window !== "undefined" && localStorage.getItem("theme");
+    if (st === "dark") setTheme("dark");
   }, []);
 
   useEffect(() => {

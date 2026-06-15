@@ -25,7 +25,6 @@ import g16 from "@/assets/16.jpeg";
 
 // Lazy load the heavy slider component
 const ReactCompareSlider = React.lazy(() => import("react-compare-slider").then(m => ({ default: m.ReactCompareSlider })));
-const ReactCompareSliderImage = React.lazy(() => import("react-compare-slider").then(m => ({ default: m.ReactCompareSliderImage })));
 
 export const Route = createLazyFileRoute("/")({
   component: HomePage,
@@ -155,7 +154,7 @@ function HomePage() {
       <section className="bg-muted/40 py-24 md:py-32">
         <div className="container-luxe">
           <Reveal className="text-center max-w-2xl mx-auto">
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("transform.title")}</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("transform.label")}</span>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("transform.title")}</h2>
           </Reveal>
           <div className="mt-16 grid gap-6 md:grid-cols-3">
@@ -195,7 +194,7 @@ function HomePage() {
       <section className="py-24 md:py-32">
         <div className="container-luxe">
           <Reveal className="text-center max-w-2xl mx-auto">
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("gallery.title")}</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("gallery.label")}</span>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("gallery.title")}</h2>
           </Reveal>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -226,7 +225,7 @@ function HomePage() {
       <section className="bg-muted/40 py-24 md:py-32">
         <div className="container-luxe">
           <Reveal className="text-center max-w-2xl mx-auto">
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("why.title")}</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("why.label")}</span>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("why.title")}</h2>
           </Reveal>
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
