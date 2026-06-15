@@ -4,6 +4,7 @@ import { Menu, X, Moon, Sun, Phone, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useApp, CONTACT } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
+import logoImg from "@/assets/logo.jpeg";
 
 export function Navbar() {
   const { lang, setLang, theme, toggleTheme, t } = useApp();
@@ -34,11 +35,9 @@ export function Navbar() {
     >
       <div className="container-luxe flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gold text-gold-foreground font-display font-black text-lg">
-            B
-          </div>
+          <img src={logoImg} alt="Khidmat Logo" className="h-10 w-10 rounded-full object-cover border border-gold" />
           <div className="leading-tight">
-            <div className={cn("font-display font-black text-xl tracking-tight", scrolled ? "text-foreground" : "text-white")}>BARWIZ</div>
+            <div className={cn("font-display font-black text-xl tracking-tight", scrolled ? "text-foreground" : "text-white")}>KHIDMAT</div>
             <div className={cn("text-[10px] uppercase tracking-[0.2em]", scrolled ? "text-muted-foreground" : "text-white/70")}>{t("tagline")}</div>
           </div>
         </Link>

@@ -1,27 +1,32 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, MessageCircle, Music2, Mail, Phone, MapPin } from "lucide-react";
 import { useApp, CONTACT } from "@/lib/i18n";
+import logoImg from "@/assets/logo.jpeg";
 
 export function Footer() {
   const { t } = useApp();
   return (
     <footer className="bg-navy text-navy-foreground">
-      <div className="container-luxe grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container-luxe grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-3">
         <div>
           <div className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gold text-gold-foreground font-display font-black text-lg">B</div>
+            <img src={logoImg} alt="Khidmat Logo" className="h-10 w-10 rounded-full object-cover border border-gold" />
             <div className="leading-tight">
-              <div className="font-display font-black text-xl">BARWIZ</div>
+              <div className="font-display font-black text-xl">KHIDMAT</div>
               <div className="text-[10px] uppercase tracking-[0.2em] text-white/60">{t("tagline")}</div>
             </div>
           </div>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">{t("footer.desc")}</p>
           <div className="mt-6 flex gap-3">
-            {[Facebook, Instagram, MessageCircle, Music2].map((Icon, i) => (
-              <a key={i} href="#" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:border-gold hover:text-gold">
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
+            <a href="https://www.facebook.com/share/1EFU3Md8QZ/" target="_blank" rel="noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:border-gold hover:text-gold text-blue-500">
+              <Facebook className="h-5 w-5 fill-current" />
+            </a>
+            <a href="https://www.instagram.com/arshad62857?utm_source=qr&igsh=ZGZ4NjRkYTBiZXZq" target="_blank" rel="noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:border-gold hover:text-gold text-pink-500">
+              <Instagram className="h-5 w-5" />
+            </a>
+            <a href="https://www.tiktok.com/@user651311276?_r=1&_t=ZS-97BD0F4Sv0Z" target="_blank" rel="noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:border-gold hover:text-gold text-white">
+              <Music2 className="h-5 w-5" />
+            </a>
           </div>
         </div>
 
@@ -43,17 +48,10 @@ export function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-gold mb-4">{t("footer.quote")}</h4>
-          <p className="text-sm text-white/70 mb-4">Get a free inspection and quote within 24 hours.</p>
-          <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-semibold text-gold-foreground transition hover:scale-105">
-            <MessageCircle className="h-4 w-4" /> {t("footer.quote")}
-          </a>
-        </div>
       </div>
       <div className="border-t border-white/10">
         <div className="container-luxe py-6 text-center text-xs text-white/50">
-          © {new Date().getFullYear()} Barwiz Marble & Tile Care. All rights reserved.
+          © {new Date().getFullYear()} Khidmat Marble & Tile Care. All rights reserved.
         </div>
       </div>
     </footer>
@@ -73,3 +71,4 @@ export function WhatsAppFloat() {
     </a>
   );
 }
+
