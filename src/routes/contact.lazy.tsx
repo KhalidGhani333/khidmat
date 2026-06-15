@@ -117,7 +117,7 @@ function ContactPage() {
                     value={formState.name}
                     onChange={e => setFormState(s => ({ ...s, name: e.target.value }))}
                     className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-gold focus:outline-none transition"
-                    placeholder="e.g. Ahmed Al-Rashidi"
+                    placeholder={t("contact.form.name.ph")}
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
@@ -127,7 +127,7 @@ function ContactPage() {
                     value={formState.phone}
                     onChange={e => setFormState(s => ({ ...s, phone: e.target.value }))}
                     className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-gold focus:outline-none transition"
-                    placeholder="+966 5x xxx xxxx"
+                    placeholder={t("contact.form.phone.ph")}
                   />
                 </div>
               </div>
@@ -138,7 +138,7 @@ function ContactPage() {
                   value={formState.email}
                   onChange={e => setFormState(s => ({ ...s, email: e.target.value }))}
                   className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-gold focus:outline-none transition"
-                  placeholder="you@example.com"
+                  placeholder={t("contact.form.email.ph")}
                 />
               </div>
               <div className="flex flex-col gap-1.5">
@@ -148,12 +148,13 @@ function ContactPage() {
                   onChange={e => setFormState(s => ({ ...s, service: e.target.value }))}
                   className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground focus:border-gold focus:outline-none transition"
                 >
-                  <option value="">— Select a service —</option>
-                  <option value="Marble Floor Polishing">Marble Floor Polishing</option>
-                  <option value="Tile Deep Cleaning">Tile Deep Cleaning</option>
-                  <option value="Granite & Stone Polishing">Granite & Stone Polishing</option>
-                  <option value="Bathroom & Kitchen Restoration">Bathroom & Kitchen Restoration</option>
-                  <option value="Commercial Space">Commercial Space</option>
+                  <option value="">{t("contact.form.select.ph")}</option>
+                  <option value="marble">{t("contact.form.opt.marble")}</option>
+                  <option value="tile">{t("contact.form.opt.tile")}</option>
+                  <option value="stairs">{t("contact.form.opt.stairs")}</option>
+                  <option value="ceramic">{t("contact.form.opt.ceramic")}</option>
+                  <option value="courtyard">{t("contact.form.opt.courtyard")}</option>
+                  <option value="tanks">{t("contact.form.opt.tanks")}</option>
                 </select>
               </div>
               <div className="flex flex-col gap-1.5">
@@ -164,7 +165,7 @@ function ContactPage() {
                   value={formState.message}
                   onChange={e => setFormState(s => ({ ...s, message: e.target.value }))}
                   className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-gold focus:outline-none transition resize-none"
-                  placeholder="Describe your floor type, area size, and any specific concerns..."
+                  placeholder={t("contact.form.message.ph")}
                 />
               </div>
               {sent && (
@@ -202,7 +203,7 @@ function ContactPage() {
       <section className="bg-muted/40 py-24 md:py-32">
         <div className="container-luxe max-w-3xl">
           <Reveal className="text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">FAQ</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("faq.label")}</span>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("services.faq.title")}</h2>
           </Reveal>
           <Reveal>

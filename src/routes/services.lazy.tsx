@@ -242,7 +242,7 @@ function ServicesPage() {
       <section className="py-24 md:py-32">
         <div className="container-luxe max-w-3xl">
           <Reveal className="text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">FAQ</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("faq.label")}</span>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("services.faq.title")}</h2>
           </Reveal>
           <Reveal>

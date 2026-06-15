@@ -23,8 +23,8 @@ const dict: Record<string, { en: string; ar: string }> = {
   "hero.badge": { en: "✦ Riyadh's #1 Marble & Tile Polishing Specialists", ar: "✦ متخصصو جلي البلاط وتلميع الرخام رقم 1 في الرياض" },
   "hero.title": { en: "Restore the Brilliance of Your Floors", ar: "أعد البريق لأرضياتك" },
   "hero.sub": {
-    en: "Marble polishing · Tile polishing (جلي بلاط) · Staircase · Ceramic · Courtyard & Tank cleaning — serving all Riyadh districts with premium Italian equipment",
-    ar: "تلميع رخام · جلي بلاط · درج · سيراميك · تنظيف هوش وخزانات — نخدم جميع أحياء الرياض بمعدات إيطالية فاخرة",
+    en: "Marble polishing · Tile polishing · Staircase · Ceramic · Courtyard & Tank cleaning - serving all Riyadh districts with premium Italian equipment",
+    ar: "تلميع رخام · جلي بلاط · درج · سيراميك · تنظيف هوش وخزانات - نخدم جميع أحياء الرياض بمعدات إيطالية فاخرة",
   },
   "cta.whatsapp": { en: "Get Free Quote on WhatsApp", ar: "احصل على عرض مجاني عبر واتساب" },
   "cta.call": { en: "Call Now +966 53 650 8959", ar: "اتصل الآن +966 53 650 8959" },
@@ -42,6 +42,7 @@ const dict: Record<string, { en: string; ar: string }> = {
   "transform.title": { en: "See the Transformation", ar: "شاهد التحول" },
   "gallery.label": { en: "OUR WORK", ar: "أعمالنا" },
   "gallery.title": { en: "Our Work Gallery", ar: "معرض أعمالنا" },
+  "gallery.view": { en: "View", ar: "عرض" },
   "why.label": { en: "OUR ADVANTAGE", ar: "ميزتنا" },
   "why.title": { en: "Why Choose Us", ar: "لماذا تختارنا" },
   "testi.title": { en: "What Clients Say", ar: "آراء عملائنا" },
@@ -58,29 +59,29 @@ const dict: Record<string, { en: string; ar: string }> = {
 
   // Services
   "service.marble.title": { en: "Marble Floor Polishing", ar: "تلميع أرضيات الرخام" },
-  "service.marble.desc": { en: "Mirror-finish restoration that removes scratches, stains and fading — bringing back the original brilliance of your natural marble floors.", ar: "استعادة اللمعان كالمراية تزيل الخدوش والبقع والبهتان وتعيد البريق الأصلي لأرضيات الرخام الطبيعي." },
-  "service.tile.title": { en: "Tile Polishing (جلي البلاط)", ar: "جلي البلاط وتلميعه" },
-  "service.tile.desc": { en: "Professional tile polishing using diamond pads and crystal materials — restoring the shine and eliminating all marks of wear.", ar: "تلميع احترافي للبلاط باستخدام أقراص الألماس ومواد الكريستال لاستعادة البريق وإزالة آثار التآكل." },
+  "service.marble.desc": { en: "Mirror-finish restoration that removes scratches, stains and fading - bringing back the original brilliance of your natural marble floors.", ar: "استعادة اللمعان كالمراية تزيل الخدوش والبقع والبهتان وتعيد البريق الأصلي لأرضيات الرخام الطبيعي." },
+  "service.tile.title": { en: "Tile Polishing", ar: "جلي البلاط وتلميعه" },
+  "service.tile.desc": { en: "Professional tile polishing using diamond pads and crystal materials - restoring the shine and eliminating all marks of wear.", ar: "تلميع احترافي للبلاط باستخدام أقراص الألماس ومواد الكريستال لاستعادة البريق وإزالة آثار التآكل." },
   "service.granite.title": { en: "Granite & Stone Polishing", ar: "تلميع الجرانيت والحجر" },
   "service.granite.desc": { en: "Specialized treatments for granite, travertine and all natural stone surfaces using Italian machinery.", ar: "معالجات متخصصة للجرانيت والترافرتين وجميع أسطح الحجر الطبيعي باستخدام معدات إيطالية." },
   "service.stairs.title": { en: "Marble Staircase Polishing", ar: "تلميع درج الرخام" },
-  "service.stairs.desc": { en: "Expert polishing of marble staircases — restoring the shine, removing scratches and protecting steps against future wear.", ar: "تلميع احترافي لدرج الرخام لاستعادة البريق وإزالة الخدوش وحماية الدرجات من التآكل المستقبلي." },
+  "service.stairs.desc": { en: "Expert polishing of marble staircases - restoring the shine, removing scratches and protecting steps against future wear.", ar: "تلميع احترافي لدرج الرخام لاستعادة البريق وإزالة الخدوش وحماية الدرجات من التآكل المستقبلي." },
   "service.ceramic.title": { en: "Ceramic & Porcelain Cleaning", ar: "تنظيف السيراميك والبورسلان" },
-  "service.ceramic.desc": { en: "Industrial-grade cleaning that eliminates dirt, grease and years of buildup from ceramic and porcelain — using safe, effective techniques that protect the surface.", ar: "تنظيف بمستوى صناعي يزيل الأوساخ والشحوم وتراكمات السنوات من السيراميك والبورسلان بتقنيات آمنة وفعّالة." },
+  "service.ceramic.desc": { en: "Industrial-grade cleaning that eliminates dirt, grease and years of buildup from ceramic and porcelain - using safe, effective techniques that protect the surface.", ar: "تنظيف بمستوى صناعي يزيل الأوساخ والشحوم وتراكمات السنوات من السيراميك والبورسلان بتقنيات آمنة وفعّالة." },
   "service.courtyard.title": { en: "Apartment & Courtyard Cleaning", ar: "تنظيف الشقق والحوش" },
-  "service.courtyard.desc": { en: "Thorough cleaning of apartments and open courtyards — removing accumulated dust, debris and stains to create a clean, orderly space.", ar: "تنظيف شامل للشقق والحوش المكشوف بإزالة الغبار والحطام والبقع المتراكمة لإنشاء مساحة نظيفة ومرتبة." },
+  "service.courtyard.desc": { en: "Thorough cleaning of apartments and open courtyards - removing accumulated dust, debris and stains to create a clean, orderly space.", ar: "تنظيف شامل للشقق والحوش المكشوف بإزالة الغبار والحطام والبقع المتراكمة لإنشاء مساحة نظيفة ومرتبة." },
   "service.tanks.title": { en: "Roof & Tank Cleaning", ar: "تنظيف الأسطح والخزانات" },
-  "service.tanks.desc": { en: "Complete cleaning of rooftops, concrete surfaces and water tanks — ensuring a sanitary, safe environment free from dust and contaminants.", ar: "تنظيف شامل للأسطح والصبة والخزانات لضمان بيئة صحية وآمنة خالية من الغبار والملوثات." },
+  "service.tanks.desc": { en: "Complete cleaning of rooftops, concrete surfaces and water tanks - ensuring a sanitary, safe environment free from dust and contaminants.", ar: "تنظيف شامل للأسطح والصبة والخزانات لضمان بيئة صحية وآمنة خالية من الغبار والملوثات." },
 
   // Features
   "feature.expert.title": { en: "Expert Technicians", ar: "فنيون متخصصون" },
   "feature.expert.desc": { en: "Specialist craftsmen with 10+ years of marble and tile restoration experience across Riyadh.", ar: "حرفيون متخصصون بخبرة تزيد عن 10 سنوات في ترميم الرخام والبلاط في الرياض." },
   "feature.italy.title": { en: "Italian Equipment", ar: "معدات إيطالية" },
-  "feature.italy.desc": { en: "Premium Lavor, Fimap, Ghibli and Klindex machinery — diamond pads and crystal polishing materials.", ar: "ماكينات لافور وفيماب وجيبلي وكليندكس — أقراص ألماس ومواد تلميع كريستال." },
+  "feature.italy.desc": { en: "Premium Lavor, Fimap, Ghibli and Klindex machinery - diamond pads and crystal polishing materials.", ar: "ماكينات لافور وفيماب وجيبلي وكليندكس - أقراص ألماس ومواد تلميع كريستال." },
   "feature.fast.title": { en: "Fast Turnaround", ar: "إنجاز سريع" },
   "feature.fast.desc": { en: "Most residential jobs completed within 24–48 hours. Larger commercial spaces in 3–5 days.", ar: "معظم الأعمال السكنية تنتهي خلال 24-48 ساعة. المساحات التجارية في 3-5 أيام." },
   "feature.price.title": { en: "Budget-Friendly Pricing", ar: "أسعار تناسب الميزانية" },
-  "feature.price.desc": { en: "Competitive, transparent quotes with no hidden fees — free site visit and inspection included.", ar: "عروض أسعار تنافسية وشفافة بلا رسوم خفية — زيارة الموقع والفحص مجانية." },
+  "feature.price.desc": { en: "Competitive, transparent quotes with no hidden fees - free site visit and inspection included.", ar: "عروض أسعار تنافسية وشفافة بلا رسوم خفية - زيارة الموقع والفحص مجانية." },
 
   // Testimonials
   "testi.label": { en: "CLIENT REVIEWS", ar: "آراء العملاء" },
@@ -96,8 +97,8 @@ const dict: Record<string, { en: string; ar: string }> = {
   "testi.khalid.quote": { en: "We've used Khidmat across three of our properties. Consistent quality, fast execution and the shine genuinely lasts. Without a doubt the best marble polishing team in Riyadh.", ar: "لقد استخدمنا خدمة في ثلاثة عقارات. جودة ثابتة وتنفيذ سريع واللمعان يدوم حقاً. بلا شك أفضل فريق لتلميع الرخام في الرياض." },
 
   // Services Page
-  "services.hero.title": { en: "جلي البلاط وتلميع الرخام", ar: "جلي البلاط وتلميع الرخام" },
-  "services.hero.sub": { en: "Tile Polishing · Marble Staircase · Ceramic · Courtyard & Tank Cleaning — All Riyadh", ar: "جلي بلاط · تلميع درج رخام · سيراميك · هوش وخزانات — جميع أحياء الرياض" },
+  "services.hero.title": { en: "Tile Polishing & Marble Buffing", ar: "جلي البلاط وتلميع الرخام" },
+  "services.hero.sub": { en: "Tile Polishing · Marble Staircase · Ceramic · Courtyard & Tank Cleaning - All Riyadh", ar: "جلي بلاط · تلميع درج رخام · سيراميك · هوش وخزانات - جميع أحياء الرياض" },
   "services.offer.title": { en: "Built on Excellence", ar: "بني على التميز" },
   "services.offer.label": { en: "What We Offer", ar: "ما نقدمه" },
   "services.all.label": { en: "ALL SERVICES", ar: "جميع خدماتنا" },
@@ -109,6 +110,7 @@ const dict: Record<string, { en: string; ar: string }> = {
   "services.equip.title": { en: "Equipment We Use", ar: "المعدات التي نستخدمها" },
   "services.equip.label": { en: "Tools of the Craft", ar: "أدوات الحرفة" },
   "services.faq.title": { en: "Common Questions", ar: "الأسئلة الشائعة" },
+  "faq.label": { en: "FAQ", ar: "الأسئلة الشائعة" },
 
   // Benefits
   "benefit.stains": { en: "Eliminates stains, scratches & dullness", ar: "يزيل البقع والخدوش والبهتان" },
@@ -125,7 +127,7 @@ const dict: Record<string, { en: string; ar: string }> = {
   // Surfaces
   "surface.marble": { en: "Marble Floor Polishing", ar: "تلميع أرضيات الرخام" },
   "surface.granite": { en: "Granite Polishing", ar: "تلميع الجرانيت" },
-  "surface.tile": { en: "Tile Polishing (جلي البلاط)", ar: "جلي البلاط وتلميعه" },
+  "surface.tile": { en: "Tile Polishing", ar: "جلي البلاط وتلميعه" },
   "surface.stairs": { en: "Marble Staircase Polishing", ar: "تلميع درج الرخام" },
   "surface.bathroom": { en: "Ceramic & Bathroom Restoration", ar: "السيراميك وترميم الحمامات" },
   "surface.courtyard": { en: "Courtyard & Apartment", ar: "الحوش والشقق" },
@@ -185,6 +187,17 @@ const dict: Record<string, { en: string; ar: string }> = {
   "contact.form.submit": { en: "Send Message", ar: "إرسال الرسالة" },
   "contact.form.sending": { en: "Sending...", ar: "جاري الإرسال..." },
   "contact.form.success": { en: "Message sent! We'll be in touch shortly.", ar: "تم إرسال الرسالة! سنتواصل معك قريباً." },
+  "contact.form.name.ph": { en: "e.g. Ahmed Al-Rashidi", ar: "مثال: أحمد الرشيدي" },
+  "contact.form.phone.ph": { en: "+966 5x xxx xxxx", ar: "+966 5x xxx xxxx" },
+  "contact.form.email.ph": { en: "you@example.com", ar: "example@example.com" },
+  "contact.form.message.ph": { en: "Describe your floor type, area size, and any specific concerns...", ar: "صف نوع الأرضية والمساحة وأي مخاوف محددة..." },
+  "contact.form.select.ph": { en: "- Select a service -", ar: "- اختر خدمة -" },
+  "contact.form.opt.marble": { en: "Marble Floor Polishing", ar: "تلميع أرضيات الرخام" },
+  "contact.form.opt.tile": { en: "Tile Polishing", ar: "جلي البلاط" },
+  "contact.form.opt.stairs": { en: "Marble Staircase Polishing", ar: "تلميع درج الرخام" },
+  "contact.form.opt.ceramic": { en: "Ceramic & Porcelain Cleaning", ar: "تنظيف السيراميك والبورسلان" },
+  "contact.form.opt.courtyard": { en: "Apartment & Courtyard Cleaning", ar: "تنظيف الشقق والحوش" },
+  "contact.form.opt.tanks": { en: "Roof & Tank Cleaning", ar: "تنظيف الأسطح والخزانات" },
 
   // Info Cards
   "info.phone": { en: "Phone", ar: "الهاتف" },

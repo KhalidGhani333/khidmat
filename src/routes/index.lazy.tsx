@@ -222,7 +222,7 @@ function HomePage() {
                     decoding="async"
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-navy/0 opacity-0 transition group-hover:bg-navy/60 group-hover:opacity-100">
-                    <span className="rounded-full border border-gold bg-gold/20 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-gold backdrop-blur-sm">View</span>
+                    <span className="rounded-full border border-gold bg-gold/20 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-gold backdrop-blur-sm">{t("gallery.view")}</span>
                   </div>
                 </div>
               </Reveal>
