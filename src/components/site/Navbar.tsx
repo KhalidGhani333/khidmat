@@ -37,7 +37,7 @@ export function Navbar() {
         <Link to="/" className="flex items-center gap-2">
           <img src={logoImg} alt="Khidmat Logo" className="h-10 w-10 rounded-full object-cover border border-gold" />
           <div className="leading-tight">
-            <div className={cn("font-display font-black text-xl tracking-tight", scrolled ? "text-foreground" : "text-white")}>KHIDMAT</div>
+            <div className={cn("font-display font-black text-xl tracking-tight", scrolled ? "text-foreground" : "text-white")}>{t("site.name")}</div>
             <div className={cn("text-[10px] uppercase tracking-[0.2em]", scrolled ? "text-muted-foreground" : "text-white/70")}>{t("tagline")}</div>
           </div>
         </Link>

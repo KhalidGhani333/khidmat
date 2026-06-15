@@ -18,6 +18,7 @@ const dict: Record<string, { en: string; ar: string }> = {
   "nav.contact": { en: "Contact", ar: "اتصل بنا" },
   "nav.blog": { en: "Blog", ar: "المدونة" },
   "nav.cta": { en: "Contact", ar: "تواصل" },
+  "site.name": { en: "KHIDMAT", ar: "خدمات" },
   "tagline": { en: "Marble & Tile Care", ar: "العناية بالرخام والسيراميك" },
 
   "hero.badge": { en: "✦ Riyadh's #1 Marble & Tile Polishing Specialists", ar: "✦ متخصصو جلي البلاط وتلميع الرخام رقم 1 في الرياض" },

@@ -12,7 +12,7 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <img src={logoImg} alt="Khidmat Logo" className="h-10 w-10 rounded-full object-cover border border-gold" />
             <div className="leading-tight">
-              <div className="font-display font-black text-xl">KHIDMAT</div>
+              <div className="font-display font-black text-xl">{t("site.name")}</div>
               <div className="text-[10px] uppercase tracking-[0.2em] text-white/60">{t("tagline")}</div>
             </div>
           </div>
