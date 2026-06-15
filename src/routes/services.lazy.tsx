@@ -1,5 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import { Check, Phone, MessageCircle, Search, Droplets, Layers, Sparkles, Shield, ClipboardCheck } from "lucide-react";
+import { Check, Phone, MessageCircle, Search, Droplets, Layers, Sparkles, Shield, ClipboardCheck, Gem, Home, Building2, ArrowUpDown } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { useApp, CONTACT } from "@/lib/i18n";
 import {
@@ -40,13 +40,22 @@ function ServicesPage() {
     t("benefit.expert"),
   ];
 
+  const allServices = [
+    { icon: Sparkles, title: t("service.marble.title"), desc: t("service.marble.desc") },
+    { icon: Layers, title: t("service.tile.title"), desc: t("service.tile.desc") },
+    { icon: ArrowUpDown, title: t("service.stairs.title"), desc: t("service.stairs.desc") },
+    { icon: Droplets, title: t("service.ceramic.title"), desc: t("service.ceramic.desc") },
+    { icon: Home, title: t("service.courtyard.title"), desc: t("service.courtyard.desc") },
+    { icon: Building2, title: t("service.tanks.title"), desc: t("service.tanks.desc") },
+  ];
+
   const surfaces = [
     { title: t("surface.marble"), img: s1 },
     { title: t("surface.granite"), img: s4 },
     { title: t("surface.tile"), img: s2 },
-    { title: t("surface.stone"), img: s3 },
+    { title: t("surface.stairs"), img: s3 },
     { title: t("surface.bathroom"), img: s5 },
-    { title: t("surface.commercial"), img: s6 },
+    { title: t("surface.courtyard"), img: s6 },
   ];
 
 
@@ -97,8 +106,31 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* WHAT WE OFFER */}
+      {/* ALL SERVICES GRID */}
       <section className="py-24 md:py-32">
+        <div className="container-luxe">
+          <Reveal className="text-center max-w-2xl mx-auto">
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("services.all.label")}</span>
+            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("services.all.title")}</h2>
+          </Reveal>
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {allServices.map((s, i) => (
+              <Reveal key={s.title} delay={(i % 3) * 0.1}>
+                <div className="group h-full rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_20px_60px_-20px_rgba(201,180,0,0.25)]">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gold/10 text-gold transition group-hover:bg-gold group-hover:text-gold-foreground">
+                    <s.icon className="h-7 w-7" />
+                  </div>
+                  <h3 className="mt-5 font-display text-xl font-bold text-foreground">{s.title}</h3>
+                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT WE OFFER */}
+      <section className="py-24 md:py-32 bg-muted/40">
         <div className="container-luxe">
           <Reveal className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("services.offer.label")}</span>
@@ -120,7 +152,7 @@ function ServicesPage() {
       </section>
 
       {/* SURFACES */}
-      <section className="bg-muted/40 py-24 md:py-32">
+      <section className="py-24 md:py-32">
         <div className="container-luxe">
           <Reveal className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("services.special.label")}</span>
