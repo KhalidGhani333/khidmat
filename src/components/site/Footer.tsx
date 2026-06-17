@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Music2, Mail, Phone, MapPin } from "lucide-react";
 import { useApp, CONTACT } from "@/lib/i18n";
-import logoImg from "@/assets/logo.jpeg";
+import logoImg from "@/assets/newlogo.png";
 
 export function Footer() {
   const { t } = useApp();
@@ -35,6 +35,7 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-white/70">
             <li><Link to="/" className="hover:text-gold">{t("nav.home")}</Link></li>
             <li><Link to="/services" className="hover:text-gold">{t("nav.services")}</Link></li>
+            <li><Link to="/guides" className="hover:text-gold">{t("nav.guides")}</Link></li>
             <li><Link to="/contact" className="hover:text-gold">{t("nav.contact")}</Link></li>
           </ul>
         </div>

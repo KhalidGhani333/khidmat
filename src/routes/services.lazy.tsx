@@ -257,6 +257,43 @@ function ServicesPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* EDUCATIONAL SECTION (NEW) */}
+      <section className="bg-muted/40 py-24 md:py-32">
+        <div className="container-luxe">
+          <div className="grid gap-12 lg:grid-cols-2">
+            <Reveal>
+              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("edu.cracks.title")}</span>
+              <h2 className="mt-4 font-display text-3xl md:text-4xl font-black">{t("edu.cracks.types")}</h2>
+              <p className="mt-5 text-muted-foreground leading-relaxed">
+                {t("edu.cracks.desc")}
+              </p>
+              <div className="mt-8 p-6 bg-card rounded-2xl border border-border">
+                <h4 className="font-bold text-foreground mb-2">{t("edu.cracks.causes")}</h4>
+                <p className="text-sm text-muted-foreground italic">Understanding these factors helps us choose the right filler and reinforcement for a lasting repair.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("edu.process.diamond")}</span>
+              <h2 className="mt-4 font-display text-3xl md:text-4xl font-black">{t("edu.process.diamond.desc")}</h2>
+              <p className="mt-5 text-muted-foreground leading-relaxed">
+                Unlike simple waxing, diamond polishing is a physical restoration of the stone's surface. We use industrial-grade diamonds to remove the microscopic layer of damage, revealing the pure, unblemished stone beneath.
+              </p>
+              <ul className="mt-8 space-y-3">
+                {[
+                  t("edu.maintenance.acid"),
+                  t("edu.maintenance.dust"),
+                  "Sealing provides a 'breathable' barrier against stains."
+                ].map((tip, i) => (
+                  <li key={i} className="flex gap-3 text-sm font-medium">
+                    <span className="text-gold">✦</span> {tip}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

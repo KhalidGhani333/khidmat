@@ -16,6 +16,7 @@ const dict: Record<string, { en: string; ar: string }> = {
   "nav.services": { en: "Services", ar: "الخدمات" },
   "nav.about": { en: "About Us", ar: "من نحن" },
   "nav.contact": { en: "Contact", ar: "اتصل بنا" },
+  "nav.guides": { en: "Guides", ar: "الدليل" },
   "nav.blog": { en: "Blog", ar: "المدونة" },
   "nav.cta": { en: "Contact", ar: "تواصل" },
   "site.name": { en: "KHIDMAT", ar: "خدمات" },
@@ -73,6 +74,45 @@ const dict: Record<string, { en: string; ar: string }> = {
   "service.courtyard.desc": { en: "Thorough cleaning of apartments and open courtyards - removing accumulated dust, debris and stains to create a clean, orderly space.", ar: "تنظيف شامل للشقق والحوش المكشوف بإزالة الغبار والحطام والبقع المتراكمة لإنشاء مساحة نظيفة ومرتبة." },
   "service.tanks.title": { en: "Roof & Tank Cleaning", ar: "تنظيف الأسطح والخزانات" },
   "service.tanks.desc": { en: "Complete cleaning of rooftops, concrete surfaces and water tanks - ensuring a sanitary, safe environment free from dust and contaminants.", ar: "تنظيف شامل للأسطح والصبة والخزانات لضمان بيئة صحية وآمنة خالية من الغبار والملوثات." },
+
+  // Educational Content
+  "edu.cracks.title": { en: "Understanding Floor Cracks", ar: "فهم تشققات الأرضيات" },
+  "edu.cracks.desc": { en: "Not all cracks are the same. Learn to distinguish between surface weathering and structural issues.", ar: "ليست كل التشققات متشابهة. تعلم كيفية التمييز بين التجوية السطحية والمشاكل الهيكلية." },
+  "edu.cracks.types": { en: "Surface Cracks vs Structural Cracks", ar: "التشققات السطحية مقابل التشققات الهيكلية" },
+  "edu.cracks.causes": { en: "Causes: Temperature changes, poor installation, or foundation pressure.", ar: "الأسباب: تغيرات درجة الحرارة، سوء التركيب، أو ضغط الأساس." },
+  
+  "edu.maintenance.title": { en: "Pro Maintenance Tips", ar: "نصائح صيانة احترافية" },
+  "edu.maintenance.acid": { en: "Never use acidic cleaners (lemon, vinegar) on marble.", ar: "لا تستخدم أبداً المنظفات الحمضية (الليمون، الخل) على الرخام." },
+  "edu.maintenance.dust": { en: "Regularly dust-mop to prevent micro-scratches from grit.", ar: "استخدم الممسحة بانتظام لمنع الخدوش الدقيقة الناتجة عن الحصى." },
+  
+  "edu.process.diamond": { en: "The Science of Diamond Polishing", ar: "علم التلميع بالألماس" },
+  "edu.process.diamond.desc": { en: "Why true restoration beats chemical waxing every time.", ar: "لماذا يتفوق الترميم الحقيقي على التشميع الكيميائي في كل مرة." },
+  "edu.process.diamond.leveling": { en: "Precision Leveling (Lippage Removal)", ar: "تسوية دقيقة (إزالة الفروق بين البلاط)" },
+  "edu.process.diamond.leveling.desc": { en: "We grind down uneven edges to create a perfectly flat, monolithic floor surface.", ar: "نقوم بجلي الحواف غير المستوية لإنشاء سطح أرضية مسطح تماماً ومتجانس." },
+  "edu.process.diamond.wet": { en: "100% Dust-Free Process", ar: "عملية خالية من الغبار بنسبة 100%" },
+  "edu.process.diamond.wet.desc": { en: "Our wet-grinding technique ensures no dust enters your home or HVAC system.", ar: "تقنية الجلي الرطب لدينا تضمن عدم دخول الغبار إلى منزلك أو نظام التكييف." },
+  "edu.process.diamond.longevity": { en: "Lasts 3-5x Longer", ar: "يدوم لفترة أطول بـ 3-5 مرات" },
+  "edu.process.diamond.longevity.desc": { en: "Diamond polishing restores the stone itself, not just a temporary top coat.", ar: "التلميع بالألماس يرمم الحجر نفسه، وليس مجرد طبقة علوية مؤقتة." },
+  
+  "comp.diamond": { en: "Diamond Polishing", ar: "التلميع بالألماس" },
+  "comp.wax": { en: "Traditional Waxing", ar: "التشميع التقليدي" },
+  "comp.res.diamond": { en: "Natural, mirror-like depth", ar: "عمق طبيعي يشبه المرآة" },
+  "comp.res.wax": { en: "Artificial, plastic-looking shine", ar: "لمعان اصطناعي يشبه البلاستيك" },
+  "comp.dur.diamond": { en: "Years of durability", ar: "سنوات من المتانة" },
+  "comp.dur.wax": { en: "Weeks/Months before yellowing", ar: "أسابيع/أشهر قبل الاصفرار" },
+
+  // Guides Page
+  "guides.hero.title": { en: "Expert Care Guides", ar: "أدلة العناية من الخبراء" },
+  "guides.hero.sub": { en: "Deep dives into stone restoration, maintenance, and protection.", ar: "تعمق في ترميم الحجر وصيانته وحمايته." },
+  
+  "guide.cracks.title": { en: "The Ultimate Guide to Tile Cracks", ar: "الدليل النهائي لتشققات البلاط" },
+  "guide.cracks.sub": { en: "How to identify, repair, and prevent future damage.", ar: "كيفية تحديد وإصلاح ومنع الأضرار المستقبلية." },
+  
+  "guide.marble.title": { en: "Marble Care 101", ar: "أساسيات العناية بالرخام" },
+  "guide.marble.sub": { en: "Keep your luxury floors looking like new for decades.", ar: "حافظ على أرضياتك الفاخرة لتبدو وكأنها جديدة لعقود." },
+  
+  "guide.tanks.title": { en: "Water Tank Hygiene", ar: "نظافة خزانات المياه" },
+  "guide.tanks.sub": { en: "Why cleaning your Riyadh tank is vital for health.", ar: "لماذا يعد تنظيف خزانك في الرياض حيوياً للصحة." },
 
   // Features
   "feature.expert.title": { en: "Expert Technicians", ar: "فنيون متخصصون" },

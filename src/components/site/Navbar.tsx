@@ -4,7 +4,7 @@ import { Menu, X, Moon, Sun, Phone, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useApp, CONTACT } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
-import logoImg from "@/assets/logo.jpeg";
+import logoImg from "@/assets/newlogo.png";
 
 export function Navbar() {
   const { lang, setLang, theme, toggleTheme, t } = useApp();
@@ -21,6 +21,7 @@ export function Navbar() {
   const links = [
     { to: "/", label: t("nav.home") },
     { to: "/services", label: t("nav.services") },
+    { to: "/guides", label: t("nav.guides") },
     { to: "/contact", label: t("nav.contact") },
   ];
 

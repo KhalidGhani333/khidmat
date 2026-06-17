@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { Suspense, useState } from "react";
 import {
   ArrowRight, ChevronDown, Sparkles, Droplets, Gem, Award, Wrench, Zap, Wallet, MessageCircle, Phone, X,
-  Layers, Home, Building2, Star,
+  Layers, Home, Building2,
 } from "lucide-react";
 import heroImg from "@/assets/hero-marble.jpg";
 import { useApp, CONTACT } from "@/lib/i18n";
@@ -42,12 +42,6 @@ function HomePage() {
     { icon: ArrowRight, title: t("service.stairs.title"), desc: t("service.stairs.desc") },
     { icon: Droplets, title: t("service.ceramic.title"), desc: t("service.ceramic.desc") },
     { icon: Home, title: t("service.courtyard.title"), desc: t("service.courtyard.desc") },
-  ];
-
-  const testimonials = [
-    { name: t("testi.ahmed.name"), role: t("testi.ahmed.role"), quote: t("testi.ahmed.quote") },
-    { name: t("testi.sara.name"), role: t("testi.sara.role"), quote: t("testi.sara.quote") },
-    { name: t("testi.khalid.name"), role: t("testi.khalid.role"), quote: t("testi.khalid.quote") },
   ];
 
   const features = [
@@ -119,10 +113,10 @@ function HomePage() {
       <section className="bg-navy text-navy-foreground py-16 md:py-20">
         <div className="container-luxe grid grid-cols-2 gap-10 md:grid-cols-4">
           {[
-            { n: 10, s: "+", l: t("stats.years") },
-            { n: 500, s: "+", l: t("stats.projects") },
+            { n: 5, s: "+", l: t("stats.years") },
+            { n: 100, s: "+", l: t("stats.projects") },
             { n: 100, s: "%", l: t("stats.satisfaction") },
-            { n: 20, s: "+", l: t("stats.active") },
+            { n: 5, s: "+", l: t("stats.active") },
           ].map((stat, i) => (
             <Reveal key={i} delay={i * 0.1} className="text-center">
               <div className="font-display text-5xl md:text-6xl font-black text-gold">
@@ -254,36 +248,19 @@ function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className="py-24 md:py-32">
-        <div className="container-luxe">
-          <Reveal className="text-center max-w-2xl mx-auto">
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("testi.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("testi.title")}</h2>
+      {/* INFORMATION BANNER (NEW) */}
+      <section className="bg-gold/5 py-16 md:py-24 border-y border-gold/10">
+        <div className="container-luxe text-center">
+          <Reveal>
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">LEARN FROM THE EXPERTS</span>
+            <h2 className="mt-3 font-display text-3xl md:text-5xl font-black">Free Knowledge & Care Guides</h2>
+            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+              We believe in educating our clients. Learn how to identify structural cracks, maintain your marble's shine, and keep your home's water tanks hygienic.
+            </p>
+            <Link to="/guides" className="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-gold px-8 py-3 text-sm font-bold text-gold transition hover:bg-gold hover:text-gold-foreground">
+              Browse Our Guides <ArrowRight className="h-4 w-4" />
+            </Link>
           </Reveal>
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
-            {testimonials.map((testi, i) => (
-              <Reveal key={i} delay={i * 0.1}>
-                <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-8 transition hover:border-gold hover:shadow-[0_20px_60px_-20px_rgba(201,180,0,0.2)]">
-                  <div className="flex gap-0.5 mb-5">
-                    {[...Array(5)].map((_, j) => (
-                      <Star key={j} className="h-4 w-4 fill-gold text-gold" />
-                    ))}
-                  </div>
-                  <p className="flex-1 text-sm text-muted-foreground leading-relaxed">"{testi.quote}"</p>
-                  <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10 font-display text-base font-black text-gold">
-                      {testi.name.charAt(0)}
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold text-foreground">{testi.name}</div>
-                      <div className="text-xs text-muted-foreground">{testi.role}</div>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
