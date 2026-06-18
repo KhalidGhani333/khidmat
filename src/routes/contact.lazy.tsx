@@ -31,12 +31,12 @@ function ContactPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-navy text-navy-foreground pt-32 pb-24 md:pt-40 md:pb-28 overflow-hidden">
+      <section className="relative bg-navy text-navy-foreground pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_70%_30%,oklch(0.78_0.15_95/0.4),transparent_50%)]" />
         <div className="container-luxe relative">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("nav.contact")}</span>
-            <h1 className="mt-4 font-display text-5xl md:text-7xl font-black text-balance">{t("contact.hero.title")}</h1>
+            <h1 className="mt-4 font-display text-4xl md:text-6xl font-black text-balance">{t("contact.hero.title")}</h1>
             <p className="mt-5 text-lg md:text-xl text-gold font-display italic max-w-2xl">
               {t("contact.hero.sub")}
             </p>
@@ -45,7 +45,7 @@ function ContactPage() {
       </section>
 
       {/* INFO */}
-      <section className="py-20 md:py-28">
+      <section className="py-12 md:py-20">
         <div className="container-luxe max-w-5xl mx-auto">
           <Reveal className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-black">{t("contact.direct.title")}</h2>
@@ -102,11 +102,11 @@ function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-muted/40 py-24 md:py-32">
+      <section className="bg-muted/40 py-16 md:py-24">
         <div className="container-luxe max-w-3xl">
           <Reveal className="text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("faq.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("services.faq.title")}</h2>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-black">{t("services.faq.title")}</h2>
           </Reveal>
           <Reveal>
             <Accordion type="single" collapsible className="mt-12">

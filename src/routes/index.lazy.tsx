@@ -10,6 +10,9 @@ import { useApp, CONTACT } from "@/lib/i18n";
 import { Reveal } from "@/components/site/Reveal";
 import { Counter } from "@/components/site/Counter";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 // Gallery & Transformation Images
 import g1 from "@/assets/1.jpeg";
@@ -24,6 +27,14 @@ import g9 from "@/assets/9.jpeg";
 import g15 from "@/assets/15.jpeg";
 import g16 from "@/assets/16.jpeg";
 
+// Service Circular Images
+import s01 from "@/assets/01.png";
+import s02 from "@/assets/02.png";
+import s03 from "@/assets/03.png";
+import s04 from "@/assets/04.png";
+import s05 from "@/assets/05.png";
+import s06 from "@/assets/06.png";
+
 // Lazy load the heavy slider component
 const ReactCompareSlider = React.lazy(() => import("react-compare-slider").then(m => ({ default: m.ReactCompareSlider })));
 
@@ -32,16 +43,16 @@ export const Route = createLazyFileRoute("/")({
 });
 
 function HomePage() {
-  const { t } = useApp();
+  const { t, lang } = useApp();
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
 
   const services = [
-    { icon: Sparkles, title: t("service.marble.title"), desc: t("service.marble.desc") },
-    { icon: Layers, title: t("service.tile.title"), desc: t("service.tile.desc") },
-    { icon: Gem, title: t("service.granite.title"), desc: t("service.granite.desc") },
-    { icon: ArrowRight, title: t("service.stairs.title"), desc: t("service.stairs.desc") },
-    { icon: Droplets, title: t("service.ceramic.title"), desc: t("service.ceramic.desc") },
-    { icon: Home, title: t("service.courtyard.title"), desc: t("service.courtyard.desc") },
+    { id: "01", img: s01, title: t("service.tile.title"), desc: t("service.tile.desc") },
+    { id: "02", img: s02, title: t("service.marble.title"), desc: t("service.marble.desc") },
+    { id: "03", img: s03, title: t("service.ceramic.title"), desc: t("service.ceramic.desc") },
+    { id: "04", img: s04, title: t("service.porcelain.title"), desc: t("service.porcelain.desc") },
+    { id: "05", img: s05, title: t("service.courtyard.title"), desc: t("service.courtyard.desc") },
+    { id: "06", img: s06, title: t("service.tanks.title"), desc: t("service.tanks.desc") },
   ];
 
   const features = [
@@ -84,34 +95,58 @@ function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.8 }}
-            className="mt-6 max-w-4xl font-display text-5xl font-black leading-[1.05] text-white sm:text-6xl lg:text-7xl text-balance"
+            className="mt-6 max-w-4xl font-display text-3xl font-black leading-[1.1] text-white sm:text-4xl lg:text-5xl text-balance tracking-tight"
           >
-            {t("hero.title").split(" ").map((w, i) => (
-              <motion.span key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 + i * 0.08 }} className="inline-block mr-3 last:mr-0">
-                {w === "Brilliance" || w === "البريق" ? <span className="text-gold italic">{w}</span> : w}
-              </motion.span>
-            ))}
+            {t("hero.title").split(",").map((part, i, arr) => {
+              const isLast = i === arr.length - 1;
+              return (
+                <motion.span 
+                  key={i} 
+                  initial={{ opacity: 0, y: 20 }} 
+                  animate={{ opacity: 1, y: 0 }} 
+                  transition={{ delay: 0.4 + i * 0.1 }} 
+                  className="inline-block"
+                >
+                  {isLast && part.includes("-") ? (
+                     <span className="block mt-4">
+                        <span className="text-white/90 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase tracking-wide">
+                          {part.split("-")[0].trim()}
+                        </span>
+                        <span className="relative inline-block ml-3 text-gold drop-shadow-[0_0_20px_rgba(201,180,0,0.5)]">
+                          <span className="relative z-10 italic font-display text-xl sm:text-2xl lg:text-3xl">— {part.split("-")[1].trim()}</span>
+                          <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-gold/10 -rotate-1 z-0 rounded-full blur-[2px]" />
+                        </span>
+                     </span>
+                  ) : (
+                    <span className={`${i % 2 === 1 ? 'text-gold' : 'text-white'} drop-shadow-lg`}>
+                      {part.trim()}{!isLast ? ", " : ""}
+                    </span>
+                  )}
+                </motion.span>
+              );
+            })}
           </motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="mt-6 max-w-2xl text-lg text-white/75 leading-relaxed">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="mt-6 max-w-2xl text-base md:text-lg text-white/85 leading-relaxed font-medium drop-shadow-sm">
             {t("hero.sub")}
           </motion.p>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }} className="mt-10 flex flex-wrap gap-4">
-            <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-4 text-sm font-semibold text-gold-foreground shadow-xl shadow-gold/30 transition hover:scale-105">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }} className="mt-8 flex flex-wrap gap-4">
+            <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2.5 rounded-full bg-gold px-6 py-3 text-sm font-bold text-gold-foreground shadow-[0_15px_40px_-10px_rgba(201,180,0,0.5)] transition hover:scale-105 active:scale-95">
               <MessageCircle className="h-5 w-5" /> {t("cta.whatsapp")}
             </a>
-            <a href={`tel:${CONTACT.phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-4 text-sm font-semibold text-white backdrop-blur-sm transition hover:border-gold hover:text-gold">
+            <a href={`tel:${CONTACT.phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2.5 rounded-full border-2 border-white/50 px-6 py-3 text-sm font-bold text-white backdrop-blur-xl transition hover:bg-white hover:text-navy active:scale-95">
               <Phone className="h-5 w-5" /> {t("cta.call")}
             </a>
           </motion.div>
         </div>
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.4 }} className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.4 }} className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/80">
           <ChevronDown className="h-6 w-6 animate-bounce" />
         </motion.div>
       </section>
 
       {/* STATS */}
-      <section className="bg-navy text-navy-foreground py-16 md:py-20">
-        <div className="container-luxe grid grid-cols-2 gap-10 md:grid-cols-4">
+      <section className="bg-navy text-navy-foreground py-12 md:py-16 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
+        <div className="container-luxe grid grid-cols-2 gap-8 md:grid-cols-4 relative z-10">
           {[
             { n: 5, s: "+", l: t("stats.years") },
             { n: 100, s: "+", l: t("stats.projects") },
@@ -119,89 +154,87 @@ function HomePage() {
             { n: 5, s: "+", l: t("stats.active") },
           ].map((stat, i) => (
             <Reveal key={i} delay={i * 0.1} className="text-center">
-              <div className="font-display text-5xl md:text-6xl font-black text-gold">
+              <div className="font-display text-4xl md:text-5xl font-black text-gold">
                 <Counter to={stat.n} suffix={stat.s} />
               </div>
-              <div className="mt-2 text-xs sm:text-sm uppercase tracking-wider text-white/60">{stat.l}</div>
+              <div className="mt-2 text-xs uppercase tracking-wider text-white/60">{stat.l}</div>
             </Reveal>
           ))}
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="py-24 md:py-32">
+      {/* ABOUT */}
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="container-luxe">
-          <Reveal className="max-w-2xl">
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("services.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black text-foreground">{t("services.title")}</h2>
-          </Reveal>
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s, i) => (
-              <Reveal key={s.title} delay={i * 0.1}>
-                <div className="group h-full rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_20px_60px_-20px_rgba(201,180,0,0.3)]">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gold/10 text-gold transition group-hover:bg-gold group-hover:text-gold-foreground">
-                    <s.icon className="h-7 w-7" />
-                  </div>
-                  <h3 className="mt-6 font-display text-2xl font-bold text-foreground">{s.title}</h3>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                  <Link to="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold">
-                    {t("cta.bookService")} <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-                  </Link>
-                </div>
-              </Reveal>
-            ))}
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            <Reveal>
+              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("nav.about")}</span>
+              <h2 className="mt-3 font-display text-2xl md:text-3xl font-black text-foreground">{t("about.title")}</h2>
+              <div className="mt-6 space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed text-pretty">
+                <p>{t("about.p1")}</p>
+                <p>{t("about.p2")}</p>
+                <p>{t("about.p3")}</p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2} className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl max-w-md mx-auto lg:max-w-none">
+              <img src={g7} alt={t("about.title")} className="h-full w-full object-cover" />
+              <div className="absolute inset-0 bg-gold/10 mix-blend-multiply" />
+            </Reveal>
           </div>
         </div>
       </section>
 
-      {/* BEFORE / AFTER */}
-      <section className="bg-muted/40 py-24 md:py-32">
+      {/* SERVICES */}
+      <section className="py-12 md:py-20">
         <div className="container-luxe">
-          <Reveal className="text-center max-w-2xl mx-auto">
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("transform.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("transform.title")}</h2>
+          <Reveal className="max-w-3xl">
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("services.label")}</span>
+            <h2 className="mt-3 font-display text-2xl md:text-3xl font-black text-foreground">{t("services.title")}</h2>
+            <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
+              <p>{t("services.intro.p1")}</p>
+              <p>{t("services.intro.p2")}</p>
+              <p>{t("services.intro.p3")}</p>
+            </div>
           </Reveal>
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
-            {ba.map((p, i) => (
-              <Reveal key={p.id} delay={i * 0.1}>
-                <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-border bg-muted aspect-[4/3]">
-                  <Suspense fallback={<div className="w-full h-full animate-pulse bg-muted" />}>
-                    <ReactCompareSlider
-                      itemOne={
-                        <div className="relative h-full w-full">
-                          <img 
-                            src={p.after} 
-                            alt="Before Restoration" 
-                            className="h-full w-full object-cover filter grayscale-[0.4] brightness-[0.7] contrast-[0.8] sepia-[0.2] blur-[1px]" 
-                          />
-                          <div className="absolute inset-0 bg-black/20 mix-blend-multiply" />
-                        </div>
-                      }
-                      itemTwo={
+          <div className="mt-16 relative">
+            <div className="grid gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3 relative z-10">
+              {services.map((s, i) => (
+                <Reveal key={s.title} delay={i * 0.1}>
+                  <div className="flex flex-col items-center text-center group">
+                    <div className="relative mb-6">
+                      <div className="relative h-56 w-56 md:h-64 md:w-64 overflow-hidden rounded-full border-4 border-white shadow-xl transition-transform duration-500 group-hover:scale-105 group-hover:rotate-2 bg-white">
                         <img 
-                          src={p.after} 
-                          alt="After Restoration" 
+                          src={s.img} 
+                          alt={s.title} 
                           className="h-full w-full object-cover" 
                         />
-                      }
-                      style={{ height: "100%" }}
-                    />
-                  </Suspense>
-                </div>
-              </Reveal>
-            ))}
+                        <div className="absolute inset-0 bg-gold/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      </div>
+                      {/* Number Badge */}
+                      <div className={`absolute top-1.5 ${lang === 'ar' ? 'left-1.5' : 'right-1.5'} flex h-12 w-12 items-center justify-center rounded-full bg-gold text-lg font-black text-gold-foreground border-4 border-white shadow-lg`}>
+                        {s.id}.
+                      </div>
+                    </div>
+                    
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-foreground transition-colors group-hover:text-gold">{s.title}</h3>
+                    <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xs">{s.desc}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
+
       {/* GALLERY */}
-      <section className="py-24 md:py-32">
+      <section className="py-12 md:py-20">
         <div className="container-luxe">
           <Reveal className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("gallery.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("gallery.title")}</h2>
+            <h2 className="mt-3 font-display text-2xl md:text-3xl font-black">{t("gallery.title")}</h2>
           </Reveal>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-4">
             {gallery.map((src, i) => (
               <Reveal key={i} delay={(i % 3) * 0.05}>
                 <div 
@@ -222,25 +255,67 @@ function HomePage() {
               </Reveal>
             ))}
           </div>
+          <Reveal className="mt-12 text-center max-w-4xl mx-auto">
+             <div className="space-y-5 text-muted-foreground leading-relaxed italic text-sm md:text-base">
+                <p>{t("gallery.desc.p1")}</p>
+                <p>{t("gallery.desc.p2")}</p>
+             </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CRACKS & PATIO */}
+      <section className="py-12 md:py-20 bg-navy text-navy-foreground overflow-hidden">
+        <div className="container-luxe space-y-24">
+          {/* CRACKS */}
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            <Reveal className="lg:order-2">
+              <h2 className="font-display text-xl md:text-3xl font-black text-gold">{t("cracks.title")}</h2>
+              <div className="mt-6 space-y-5 text-base md:text-lg text-white/70 leading-relaxed">
+                <p>{t("cracks.p1")}</p>
+                <p>{t("cracks.p2")}</p>
+                <p>{t("cracks.p3")}</p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2} className="relative lg:order-1 aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl max-w-md mx-auto lg:max-w-none">
+              <img src={g8} alt={t("cracks.title")} className="h-full w-full object-cover" />
+            </Reveal>
+          </div>
+
+          {/* PATIO */}
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            <Reveal>
+              <h2 className="font-display text-xl md:text-3xl font-black text-gold">{t("patio.title")}</h2>
+              <div className="mt-6 space-y-5 text-base md:text-lg text-white/70 leading-relaxed">
+                <p>{t("patio.p1")}</p>
+                <p>{t("patio.p2")}</p>
+                <p>{t("patio.p3")}</p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2} className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl max-w-md mx-auto lg:max-w-none">
+              <img src={g9} alt={t("patio.title")} className="h-full w-full object-cover" />
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* WHY */}
-      <section className="bg-muted/40 py-24 md:py-32">
+
+      <section className="bg-muted/40 py-12 md:py-20">
         <div className="container-luxe">
           <Reveal className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("why.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("why.title")}</h2>
+            <h2 className="mt-3 font-display text-2xl md:text-3xl font-black">{t("why.title")}</h2>
           </Reveal>
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f, i) => (
               <Reveal key={f.title} delay={i * 0.08}>
-                <div className="h-full rounded-2xl bg-card p-7 ring-1 ring-border transition hover:ring-gold">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold text-gold-foreground">
-                    <f.icon className="h-6 w-6" />
+                <div className="h-full rounded-2xl bg-card p-6 ring-1 ring-border transition hover:ring-gold">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold text-gold-foreground">
+                    <f.icon className="h-5 w-5" />
                   </div>
-                  <h3 className="mt-5 font-display text-xl font-bold">{f.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
+                  <h3 className="mt-4 font-display text-lg font-bold">{f.title}</h3>
+                  <p className="mt-2 text-xs md:text-sm text-muted-foreground">{f.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -249,30 +324,69 @@ function HomePage() {
       </section>
 
       {/* INFORMATION BANNER (NEW) */}
-      <section className="bg-gold/5 py-16 md:py-24 border-y border-gold/10">
+      <section className="bg-gold/5 py-12 md:py-16 border-y border-gold/10">
         <div className="container-luxe text-center">
           <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">LEARN FROM THE EXPERTS</span>
-            <h2 className="mt-3 font-display text-3xl md:text-5xl font-black">Free Knowledge & Care Guides</h2>
-            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              We believe in educating our clients. Learn how to identify structural cracks, maintain your marble's shine, and keep your home's water tanks hygienic.
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("experts.label")}</span>
+            <h2 className="mt-3 font-display text-xl md:text-3xl font-black">{t("experts.title")}</h2>
+            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+              {t("experts.desc")}
             </p>
-            <Link to="/guides" className="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-gold px-8 py-3 text-sm font-bold text-gold transition hover:bg-gold hover:text-gold-foreground">
-              Browse Our Guides <ArrowRight className="h-4 w-4" />
+            <Link to="/guides" className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-gold px-7 py-2.5 text-sm font-bold text-gold transition hover:bg-gold hover:text-gold-foreground">
+              {t("experts.link")} <ArrowRight className="h-4 w-4" />
             </Link>
           </Reveal>
         </div>
       </section>
 
+      {/* CONTACT FORM */}
+      <section className="py-12 md:py-20 bg-background">
+        <div className="container-luxe max-w-4xl mx-auto">
+          <Reveal className="text-center mb-12">
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("nav.contact")}</span>
+            <h2 className="mt-3 font-display text-2xl md:text-3xl font-black">{t("contact.form.title")}</h2>
+            <p className="mt-3 text-muted-foreground text-sm md:text-base">{t("contact.form.sub")}</p>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="rounded-3xl border border-border bg-card p-6 md:p-10 shadow-2xl shadow-black/5">
+              <form className="grid gap-5 md:grid-cols-2" onSubmit={(e) => e.preventDefault()}>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">{t("contact.form.name")}</label>
+                  <Input placeholder={t("contact.form.name.ph")} />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">{t("contact.form.email")}</label>
+                  <Input type="email" placeholder={t("contact.form.email.ph")} />
+                </div>
+                <div className="space-y-2 md:col-span-2">
+                  <label className="text-sm font-medium">{t("contact.form.subject")}</label>
+                  <Input placeholder="Marble polishing inquiry..." />
+                </div>
+                <div className="space-y-2 md:col-span-2">
+                  <label className="text-sm font-medium">{t("contact.form.message")}</label>
+                  <Textarea placeholder={t("contact.form.message.ph")} className="min-h-[120px]" />
+                </div>
+                <div className="md:col-span-2">
+                  <Button size="lg" className="w-full bg-gold hover:bg-gold/90 text-gold-foreground font-bold h-11">
+                    {t("contact.form.submit")}
+                  </Button>
+                </div>
+              </form>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
-      <section className="bg-navy text-navy-foreground py-24 md:py-32">
+      <section className="bg-navy text-navy-foreground py-12 md:py-20">
         <div className="container-luxe text-center">
           <Reveal>
-            <h2 className="font-display text-4xl md:text-6xl font-black text-balance">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-balance">
               {t("finalcta.title")}
             </h2>
-            <p className="mt-5 text-lg text-white/70 max-w-xl mx-auto">{t("finalcta.sub")}</p>
-            <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" className="mt-10 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold text-gold-foreground shadow-xl shadow-gold/30 transition hover:scale-105">
+            <p className="mt-4 text-base md:text-lg text-white/70 max-w-xl mx-auto">{t("finalcta.sub")}</p>
+            <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-base font-semibold text-gold-foreground shadow-xl shadow-gold/30 transition hover:scale-105">
               <MessageCircle className="h-5 w-5" /> {t("cta.whatsappShort")}
             </a>
           </Reveal>

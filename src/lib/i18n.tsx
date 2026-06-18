@@ -23,23 +23,78 @@ const dict: Record<string, { en: string; ar: string }> = {
   "tagline": { en: "Marble & Tile Care", ar: "العناية بالرخام والسيراميك" },
 
   "hero.badge": { en: "✦ Riyadh's #1 Marble & Tile Polishing Specialists", ar: "✦ متخصصو جلي البلاط وتلميع الرخام رقم 1 في الرياض" },
-  "hero.title": { en: "Restore the Brilliance of Your Floors", ar: "أعد البريق لأرضياتك" },
+  "hero.title": { en: "Tile polishing, marble polishing, ceramic and porcelain cleaning, yard, roof, and water tanks - Abu Samir", ar: "جلي بلاط وتلميع رخام وتنظيف سيراميك وبورسلان وحوش وسطح وخزانات - أبو سمير" },
   "hero.sub": {
-    en: "Marble polishing · Tile polishing · Staircase · Ceramic · Courtyard & Tank cleaning - serving all Riyadh districts with premium Italian equipment",
-    ar: "تلميع رخام · جلي بلاط · درج · سيراميك · تنظيف هوش وخزانات - نخدم جميع أحياء الرياض بمعدات إيطالية فاخرة",
+    en: "Marble and tile polishing services. Cleaning ceramic and porcelain for yards, roofs, bathrooms, tanks and kitchens.",
+    ar: "خدمات جلي وتلميع الرخام والبلاط. تنظيف السيراميك والبورسلان للأحواش والأسطح والحمامات والخزانات والمطابخ.",
   },
   "cta.whatsapp": { en: "Get Free Quote on WhatsApp", ar: "احصل على عرض مجاني عبر واتساب" },
   "cta.call": { en: "Call Now +966 53 650 8959", ar: "اتصل الآن +966 53 650 8959" },
-  "cta.whatsappShort": { en: "WhatsApp Us Now", ar: "راسلنا على واتساب" },
+  "cta.whatsappShort": { en: "WhatsApp Us Now", ar: "راسلنا عبر واتساب" },
   "cta.bookService": { en: "Book Service", ar: "احجز الخدمة" },
 
   "stats.years": { en: "Years of Experience", ar: "سنوات من الخبرة" },
   "stats.projects": { en: "Projects Completed", ar: "مشروع مكتمل" },
   "stats.satisfaction": { en: "Client Satisfaction", ar: "رضا العملاء" },
-  "stats.active": { en: "Riyadh Districts Served", ar: "حي في الرياض نخدمها" },
+  "stats.active": { en: "Riyadh Districts Served", ar: "أحياء الرياض التي نخدمها" },
+
+  "about.title": { en: "About marble polishing in Riyadh", ar: "حول جلي وتلميع الرخام في الرياض" },
+  "about.p1": {
+    en: "We specialize in marble polishing in Riyadh, offering professional services designed to restore your marble to its original, luxurious, and elegant appearance. We utilize the latest polishing equipment and advanced treatment techniques to remove scratches, stains, and fading, while fully preserving the marble's quality and integrity, giving your floors a long-lasting, brilliant shine.",
+    ar: "نحن متخصصون في جلي وتلميع الرخام في الرياض، ونقدم خدمات احترافية مصممة لاستعادة مظهر الرخام الأصلي والفاخر والأنيق. نحن نستخدم أحدث معدات التلميع وتقنيات المعالجة المتقدمة لإزالة الخدوش والبقع والبهتان، مع الحفاظ الكامل على جودة الرخام وسلامته، مما يمنح أرضياتك لمعاناً رائعاً يدوم طويلاً.",
+  },
+  "about.p2": {
+    en: "Our team possesses extensive practical experience working with all types of marble and natural stone, whether in homes, villas, offices, or commercial establishments. We adhere to the highest standards of quality and precision at every stage of the work, and we strive to complete the service as quickly as possible without compromising the quality of the final results.",
+    ar: "يمتلك فريقنا خبرة عملية واسعة في التعامل مع جميع أنواع الرخام والحجر الطبيعي، سواء في المنازل أو الفلل أو المكاتب أو المنشآت التجارية. نحن نلتزم بأعلى معايير الجودة والدقة في كل مرحلة من مراحل العمل، ونسعى جاهدين لإكمال الخدمة في أسرع وقت ممكن دون المساس بجودة النتائج النهائية.",
+  },
+  "about.p3": {
+    en: "We believe that customer satisfaction is the foundation of our success, so we provide customized solutions tailored to each client's needs, with competitive prices and reliable service. With marble polishing in Riyadh, we guarantee an elegant appearance, high quality, and professional care that enhances the beauty and value of your space.",
+    ar: "نحن نؤمن بأن رضا العملاء هو أساس نجاحنا، لذلك نقدم حلولاً مخصصة تناسب احتياجات كل عميل، بأسعار تنافسية وخدمة موثوقة. مع جلي وتلميع الرخام في الرياض، نضمن مظهراً أنيقاً وجودة عالية وعناية احترافية تعزز جمال وقيمة مساحتك.",
+  },
 
   "services.label": { en: "WHAT WE DO", ar: "ماذا نقدم" },
-  "services.title": { en: "Our Core Services", ar: "خدماتنا الأساسية" },
+  "services.title": { en: "Our services", ar: "خدماتنا" },
+  "services.intro.p1": {
+    en: "Thank you for your interest in our marble polishing services in Riyadh. We offer specialized marble and tile polishing and cleaning services at the highest quality and best prices in Riyadh. Our aim is to provide effective solutions that restore floors to their natural shine and maintain their beauty for a long time, with a firm commitment to precision and punctuality.",
+    ar: "نشكرك على اهتمامك بخدماتنا لجلي وتلميع الرخام في الرياض. نحن نقدم خدمات جلي وتلميع وتنظيف الرخام والبلاط المتخصصة بأعلى جودة وأفضل الأسعار في الرياض. هدفنا هو تقديم حلول فعالة تعيد للأرضيات لمعانها الطبيعي وتحافظ على جمالها لفترة طويلة، مع التزام صارم بالدقة والمواعيد.",
+  },
+  "services.intro.p2": {
+    en: "We understand the importance of maintaining the cleanliness and elegance of marble and tiles in homes and offices, so we use the latest equipment and advanced technologies for floor cleaning and polishing. Our highly trained and experienced team is committed to executing each project with meticulous care to ensure outstanding results that satisfy our clients.",
+    ar: "نحن ندرك أهمية الحفاظ على نظافة وأناقة الرخام والبلاط في المنازل والمكاتب، لذلك نستخدم أحدث المعدات والتقنيات المتقدمة لتنظيف وتلميع الأرضيات. يلتزم فريقنا المدرب تدريباً عالياً وذو الخبرة بتنفيذ كل مشروع بعناية فائقة لضمان نتائج متميزة ترضي عملائنا.",
+  },
+  "services.intro.p3": {
+    en: "Whether you need kitchen marble polishing, bathroom tile cleaning, or floor treatment for large spaces, marble polishing in Riyadh offers a comprehensive service at an affordable price. Regardless of the surface type or size, we guarantee professional results that reflect beauty and sophistication and fully meet your expectations.",
+    ar: "سواء كنت بحاجة إلى جلي رخام المطبخ، أو تنظيف بلاط الحمام، أو معالجة الأرضيات للمساحات الكبيرة، فإن جلي وتلميع الرخام في الرياض يقدم خدمة شاملة بسعر مناسب. بغض النظر عن نوع السطح أو حجمه، نضمن نتائج احترافية تعكس الجمال والرقي وتلبي توقعاتك تماماً.",
+  },
+
+  "cracks.title": { en: "Repairing tile cracks and making special arrangements for polishing old tiles", ar: "إصلاح تشققات البلاط وعمل ترتيبات خاصة لتلميع البلاط القديم" },
+  "cracks.p1": {
+    en: "In Riyadh, we offer specialized marble polishing services, including tile cleaning and crack repair. We understand that tile cracks are among the most common problems and require prompt intervention to prevent further damage. These cracks can result from natural factors such as temperature and humidity changes, or from technical issues like poor installation or excessive pressure on the tiles over time.",
+    ar: "في الرياض، نقدم خدمات متخصصة في جلي وتلميع الرخام، بما في ذلك تنظيف البلاط وإصلاح التشققات. نحن ندرك أن تشققات البلاط من بين المشاكل الأكثر شيوعاً وتتطلب تدخلاً فورياً لمنع المزيد من الضرر. يمكن أن تنتج هذه التشققات عن عوامل طبيعية مثل تغيرات درجات الحرارة والرطوبة، أو عن مشاكل فنية مثل سوء التركيب أو الضغط الزائد على البلاط بمرور الوقت.",
+  },
+  "cracks.p2": {
+    en: "We carefully assess cracks to determine their type, whether they are superficial cracks caused by weather conditions or deep cracks that may indicate a problem in the underlying structure. After inspection, we choose the most suitable repair method that addresses the root cause while preserving the quality and durability of the tiles.",
+    ar: "نحن نقيم التشققات بعناية لتحديد نوعها، سواء كانت تشققات سطحية ناتجة عن الظروف الجوية أو تشققات عميقة قد تشير إلى مشكلة في الهيكل الأساسي. بعد الفحص، نختار طريقة الإصلاح الأكثر ملاءمة التي تعالج السبب الجذري مع الحفاظ على جودة ومتانة البلاط.",
+  },
+  "cracks.p3": {
+    en: "The marble polishing team in Riyadh uses high-quality adhesives and specialized mixtures to fill cracks, reinforcing damaged areas with fiberglass when necessary. The surface is then smoothed and treated with protective coatings such as sealer or tile wax to ensure a consistent appearance and long-lasting shine. They also provide preventative guidance to help maintain the tiles and their beauty for as long as possible.",
+    ar: "يستخدم فريق جلي وتلميع الرخام في الرياض مواد لاصقة عالية الجودة وخلطات متخصصة لملء التشققات، مع تعزيز المناطق المتضررة بالألياف الزجاجية عند الضرورة. ثم يتم تنعيم السطح ومعالجته بطبقات واقية مثل العازل أو شمع البلاط لضمان مظهر متناسق ولمعان يدوم طويلاً. كما يقدمون إرشادات وقائية للمساعدة في الحفاظ على البلاط وجماله لأطول فترة ممكنة.",
+  },
+
+  "patio.title": { en: "The importance of polishing patio tiles", ar: "أهمية جلي وتلميع بلاط الحوش" },
+  "patio.p1": {
+    en: "We believe that polishing patio tiles is essential for maintaining the elegance and cleanliness of outdoor spaces. Over time, tiles accumulate dust, stains, and weather elements that affect their appearance and shine. We utilize modern techniques and specialized cleaning materials that effectively remove dirt and restore the tiles' natural luster and vitality, leaving your patio looking stylish and refreshed.",
+    ar: "نحن نؤمن بأن جلي وتلميع بلاط الحوش ضروري للحفاظ على أناقة ونظافة المساحات الخارجية. بمرور الوقت، يتراكم الغبار والبقع والعوامل الجوية على البلاط مما يؤثر على مظهره ولمعانه. نحن نستخدم تقنيات حديثة ومواد تنظيف متخصصة تزيل الأوساخ بفعالية وتعيد للبلاط بريقه وحيويته الطبيعية، مما يترك حوش منزلك يبدو أنيقاً ومتجدداً.",
+  },
+  "patio.p2": {
+    en: "The tile polishing process begins with a deep cleaning that removes stubborn deposits and stains using advanced equipment, ensuring the tiles are protected from any damage. Whether you're looking for routine maintenance or a complete overhaul of your faded patio tiles, our team offers flexible and tailored solutions for every situation, transforming your patio into a comfortable and inviting space for everyday use.",
+    ar: "تبدأ عملية تلميع البلاط بتنظيف عميق يزيل الترسبات والبقع المستعصية باستخدام معدات متقدمة، مما يضمن حماية البلاط من أي ضرر. سواء كنت تبحث عن صيانة روتينية أو تجديد شامل لبلاط الحوش الباهت، يقدم فريقنا حلولاً مرنة ومخصصة لكل موقف، مما يحول حوش منزلك إلى مساحة مريحة وجذابة للاستخدام اليومي.",
+  },
+  "patio.p3": {
+    en: "Our services don't just focus on enhancing the exterior appearance; we also aim to improve the durability of your tiles and extend their lifespan. By using high-quality materials and advanced polishing techniques, we guarantee long-lasting results that keep your patio looking beautiful and clean. Choose our services for a professional polish that will give your outdoor space a lasting shine.",
+    ar: "لا تركز خدماتنا فقط على تحسين المظهر الخارجي؛ نهدف أيضاً إلى تحسين متانة البلاط وإطالة عمره الافتراضي. باستخدام مواد عالية الجودة وتقنيات تلميع متقدمة، نضمن نتائج تدوم طويلاً تحافظ على جمال ونظافة حوش منزلك. اختر خدماتنا للحصول على تلميع احترافي يمنح مساحتك الخارجية لمعاناً يدوم طويلاً.",
+  },
+
   "transform.label": { en: "BEFORE & AFTER", ar: "قبل وبعد" },
   "transform.title": { en: "See the Transformation", ar: "شاهد التحول" },
   "gallery.label": { en: "OUR WORK", ar: "أعمالنا" },
@@ -55,25 +110,23 @@ const dict: Record<string, { en: string; ar: string }> = {
   "footer.contact": { en: "Contact Info", ar: "معلومات الاتصال" },
   "footer.quote": { en: "Get Free Quote", ar: "احصل على عرض مجاني" },
   "footer.desc": {
-    en: "Riyadh's trusted experts in marble, tile and stone restoration. Bringing back the shine since 2015.",
-    ar: "خبراء الرياض الموثوقون في تجديد الرخام والسيراميك والحجر. نعيد البريق منذ عام 2015.",
+    en: "We specialize in marble polishing in Riyadh, offering professional services designed to restore your marble to its original, luxurious, and elegant appearance.",
+    ar: "نحن متخصصون في جلي وتلميع الرخام في الرياض، ونقدم خدمات احترافية مصممة لاستعادة مظهر الرخام الأصلي والفاخر والأنيق.",
   },
 
   // Services
-  "service.marble.title": { en: "Marble Floor Polishing", ar: "تلميع أرضيات الرخام" },
-  "service.marble.desc": { en: "Mirror-finish restoration that removes scratches, stains and fading - bringing back the original brilliance of your natural marble floors.", ar: "استعادة اللمعان كالمراية تزيل الخدوش والبقع والبهتان وتعيد البريق الأصلي لأرضيات الرخام الطبيعي." },
-  "service.tile.title": { en: "Tile Polishing", ar: "جلي البلاط وتلميعه" },
-  "service.tile.desc": { en: "Professional tile polishing using diamond pads and crystal materials - restoring the shine and eliminating all marks of wear.", ar: "تلميع احترافي للبلاط باستخدام أقراص الألماس ومواد الكريستال لاستعادة البريق وإزالة آثار التآكل." },
-  "service.granite.title": { en: "Granite & Stone Polishing", ar: "تلميع الجرانيت والحجر" },
-  "service.granite.desc": { en: "Specialized treatments for granite, travertine and all natural stone surfaces using Italian machinery.", ar: "معالجات متخصصة للجرانيت والترافرتين وجميع أسطح الحجر الطبيعي باستخدام معدات إيطالية." },
-  "service.stairs.title": { en: "Marble Staircase Polishing", ar: "تلميع درج الرخام" },
-  "service.stairs.desc": { en: "Expert polishing of marble staircases - restoring the shine, removing scratches and protecting steps against future wear.", ar: "تلميع احترافي لدرج الرخام لاستعادة البريق وإزالة الخدوش وحماية الدرجات من التآكل المستقبلي." },
-  "service.ceramic.title": { en: "Ceramic & Porcelain Cleaning", ar: "تنظيف السيراميك والبورسلان" },
-  "service.ceramic.desc": { en: "Industrial-grade cleaning that eliminates dirt, grease and years of buildup from ceramic and porcelain - using safe, effective techniques that protect the surface.", ar: "تنظيف بمستوى صناعي يزيل الأوساخ والشحوم وتراكمات السنوات من السيراميك والبورسلان بتقنيات آمنة وفعّالة." },
-  "service.courtyard.title": { en: "Apartment & Courtyard Cleaning", ar: "تنظيف الشقق والحوش" },
-  "service.courtyard.desc": { en: "Thorough cleaning of apartments and open courtyards - removing accumulated dust, debris and stains to create a clean, orderly space.", ar: "تنظيف شامل للشقق والحوش المكشوف بإزالة الغبار والحطام والبقع المتراكمة لإنشاء مساحة نظيفة ومرتبة." },
-  "service.tanks.title": { en: "Roof & Tank Cleaning", ar: "تنظيف الأسطح والخزانات" },
-  "service.tanks.desc": { en: "Complete cleaning of rooftops, concrete surfaces and water tanks - ensuring a sanitary, safe environment free from dust and contaminants.", ar: "تنظيف شامل للأسطح والصبة والخزانات لضمان بيئة صحية وآمنة خالية من الغبار والملوثات." },
+  "service.marble.title": { en: "Marble polishing in Riyadh", ar: "تلميع الرخام في الرياض" },
+  "service.marble.desc": { en: "We take care of marble polishing in Riyadh to restore the natural shine to stone floors and remove any signs of damage or fading, while maintaining their durability and beauty.", ar: "نحن نهتم بجلي وتلميع الرخام في الرياض لاستعادة اللمعان الطبيعي للأرضيات الحجرية وإزالة أي علامات للتلف أو البهتان، مع الحفاظ على متانتها وجمالها." },
+  "service.tile.title": { en: "Tile polishing in Riyadh", ar: "جلي البلاط في الرياض" },
+  "service.tile.desc": { en: "We offer tile polishing services in Riyadh to remove stains and scratches and restore the shine to the floors, making them clean and shiny with the highest quality and high professionalism.", ar: "نحن نقدم خدمات جلي البلاط في الرياض لإزالة البقع والخدوش واستعادة اللمعان للأرضيات، مما يجعلها نظيفة ولامعة بأعلى جودة واحترافية عالية." },
+  "service.ceramic.title": { en: "Ceramic tile cleaning in Riyadh", ar: "تنظيف بلاط السيراميك في الرياض" },
+  "service.ceramic.desc": { en: "Our ceramic cleaning service in Riyadh guarantees the easy removal of dirt and grease, so that your floors look clean and tidy without any extra effort from you.", ar: "تضمن خدمة تنظيف السيراميك لدينا في الرياض سهولة إزالة الأوساخ والشحوم، لتبدو أرضياتك نظيفة ومرتبة دون أي مجهود إضافي منك." },
+  "service.porcelain.title": { en: "Porcelain cleaning in Riyadh", ar: "تنظيف البورسلان في الرياض" },
+  "service.porcelain.desc": { en: "We provide porcelain cleaning services in Riyadh using safe and effective materials and techniques that preserve its shine and appearance. We utilize the latest equipment to extend its lifespan without any scratches or damage.", ar: "نحن نقدم خدمات تنظيف البورسلان في الرياض باستخدام مواد وتقنيات آمنة وفعالة تحافظ على لمعانه ومظهره. نحن نستخدم أحدث المعدات لإطالة عمره الافتراضي دون أي خدوش أو تلف." },
+  "service.courtyard.title": { en: "Yard cleaning in Riyadh", ar: "تنظيف الحوش في الرياض" },
+  "service.courtyard.desc": { en: "We take care of cleaning the yard in Riyadh to remove accumulated dust and dirt, while providing a neat and bright appearance that adds a touch of beauty to the place.", ar: "نحن نهتم بتنظيف الحوش في الرياض لإزالة الغبار والأوساخ المتراكمة، مع توفير مظهر أنيق ومشرق يضيف لمسة من الجمال للمكان." },
+  "service.tanks.title": { en: "Roof and tank cleaning in Riyadh", ar: "تنظيف الأسطح والخزانات في الرياض" },
+  "service.tanks.desc": { en: "Our roof and tank cleaning service in Riyadh ensures a healthy and safe environment, as we remove dirt and impurities while guaranteeing the complete cleanliness of the water and tanks.", ar: "تضمن خدمة تنظيف الأسطح والخزانات لدينا في الرياض بيئة صحية وآمنة، حيث نقوم بإزالة الأوساخ والشوائب مع ضمان النظافة الكاملة للمياه والخزانات." },
 
   // Educational Content
   "edu.cracks.title": { en: "Understanding Floor Cracks", ar: "فهم تشققات الأرضيات" },
@@ -87,7 +140,7 @@ const dict: Record<string, { en: string; ar: string }> = {
   
   "edu.process.diamond": { en: "The Science of Diamond Polishing", ar: "علم التلميع بالألماس" },
   "edu.process.diamond.desc": { en: "Why true restoration beats chemical waxing every time.", ar: "لماذا يتفوق الترميم الحقيقي على التشميع الكيميائي في كل مرة." },
-  "edu.process.diamond.leveling": { en: "Precision Leveling (Lippage Removal)", ar: "تسوية دقيقة (إزالة الفروق بين البلاط)" },
+  "edu.process.diamond.leveling": { en: "Precision Leveling (Lippage Removal)", ar: "تسوية دقيقة (إزالة الفروق بين الرخام)" },
   "edu.process.diamond.leveling.desc": { en: "We grind down uneven edges to create a perfectly flat, monolithic floor surface.", ar: "نقوم بجلي الحواف غير المستوية لإنشاء سطح أرضية مسطح تماماً ومتجانس." },
   "edu.process.diamond.wet": { en: "100% Dust-Free Process", ar: "عملية خالية من الغبار بنسبة 100%" },
   "edu.process.diamond.wet.desc": { en: "Our wet-grinding technique ensures no dust enters your home or HVAC system.", ar: "تقنية الجلي الرطب لدينا تضمن عدم دخول الغبار إلى منزلك أو نظام التكييف." },
@@ -210,19 +263,36 @@ const dict: Record<string, { en: string; ar: string }> = {
   "faq.warranty.q": { en: "Do you provide a warranty?", ar: "هل تقدمون ضماناً؟" },
   "faq.warranty.a": { en: "Yes, we offer a satisfaction guarantee and warranty on all polishing work performed.", ar: "نعم، نحن نقدم ضمان الرضا وضماناً على جميع أعمال التلميع التي نقوم بها." },
 
+  "gallery.desc.p1": { 
+    en: "We offer marble, tile, granite, and staircase polishing services using the latest technologies and state-of-the-art equipment. We pay special attention to polishing stairs and marble facades to achieve a luxurious, long-lasting crystal-like shine. We are committed to the highest standards of precision and professionalism in our work and are fully punctual.", 
+    ar: "نقدم خدمات جلي وتلميع الرخام والبلاط والجرانيت والدرج باستخدام أحدث التقنيات والمعدات المتطورة. نولي اهتماماً خاصاً لتلميع الأدراج وواجهات الرخام لتحقيق لمعان كريستالي فاخر يدوم طويلاً. نحن ملتزمون بأعلى معايير الدقة والاحترافية في عملنا مع الالتزام التام بالمواعيد." 
+  },
+  "gallery.desc.p2": { 
+    en: "We rely on Syrian expertise specializing in marble polishing and cleaning, and we offer our services in the Eastern Province for all types of marble, tiles, stone facades, and granite. Our professional technicians have extensive experience, and we use only genuine diamond polishing stones and crystal polishing materials to guarantee the best results.", 
+    ar: "نعتمد على خبرات سورية متخصصة في جلي وتلميع وتنظيف الرخام، ونقدم خدماتنا في المنطقة الشرقية لجميع أنواع الرخام والبلاط والواجهات الحجرية والجرانيت. يمتلك فنيونا المحترفون خبرة واسعة، ونستخدم فقط أحجار جلي الألماس الأصلية ومواد تلميع الكريستال لضمان أفضل النتائج." 
+  },
+  "experts.label": { en: "LEARN FROM THE EXPERTS", ar: "تعلم من الخبراء" },
+  "experts.title": { en: "Free Knowledge & Care Guides", ar: "أدلة مجانية للمعرفة والعناية" },
+  "experts.desc": { 
+    en: "We believe in educating our clients. Learn how to identify structural cracks, maintain your marble's shine, and keep your home's water tanks hygienic.", 
+    ar: "نؤمن بتثقيف عملائنا. تعلم كيفية تحديد التشققات الهيكلية، والحفاظ على لمعان الرخام، والحفاظ على نظافة خزانات المياه في منزلك." 
+  },
+  "experts.link": { en: "Browse Our Guides", ar: "تصفح أدلتنا" },
+
   // Contact Page
   "contact.hero.title": { en: "Get In Touch", ar: "تواصل معنا" },
   "contact.hero.sub": { en: "Contact us for professional marble & tile polishing services in Riyadh", ar: "اتصل بنا للحصول على خدمات تلميع الرخام والسيراميك الاحترافية في الرياض" },
   "contact.direct.title": { en: "Reach Us Directly", ar: "تواصل معنا مباشرة" },
-  "contact.direct.sub": { en: "We respond within an hour during business hours.", ar: "نرد في غضون ساعة خلال ساعات العمل." },
+  "contact.direct.sub": { en: "We respond within an hour during business hours.", ar: "نرد خلال ساعة واحدة أثناء ساعات العمل." },
   "contact.form.title": { en: "Send a Message", ar: "أرسل رسالة" },
   "contact.form.sub": { en: "Fill the form and we'll get back to you fast.", ar: "املأ النموذج وسنقوم بالرد عليك بسرعة." },
   "contact.hours.title": { en: "Business Hours", ar: "ساعات العمل" },
-  "contact.hours.sat": { en: "Saturday – Thursday: 8:00 AM – 8:00 PM", ar: "السبت – الخميس: 8:00 صباحاً – 8:00 مساءً" },
+  "contact.hours.sat": { en: "Saturday – Thursday: 8:00 AM – 8:00 PM", ar: "من السبت إلى الخميس: 8:00 صباحاً – 8:00 مساءً" },
   "contact.hours.fri": { en: "Friday: Off", ar: "الجمعة: مغلق" },
   "contact.form.name": { en: "Full Name *", ar: "الاسم الكامل *" },
   "contact.form.email": { en: "Email *", ar: "البريد الإلكتروني *" },
   "contact.form.phone": { en: "Phone *", ar: "رقم الهاتف *" },
+  "contact.form.subject": { en: "Subject", ar: "الموضوع" },
   "contact.form.service": { en: "Service Interested In", ar: "الخدمة المطلوبة" },
   "contact.form.message": { en: "Message *", ar: "الرسالة *" },
   "contact.form.submit": { en: "Send Message", ar: "إرسال الرسالة" },
@@ -305,7 +375,7 @@ export function useApp() {
 export const CONTACT = {
   phone: "+966 53 650 8959",
   whatsapp: "https://wa.me/966536508959",
-  whatsappDisplay: "+92 324 2836415",
-  email: "zahidzahidkhan438@gmail.com",
+  whatsappDisplay: "+966 53 650 8959",
+  email: "barvez0578404211@gmail.com",
   location: "Riyadh, Saudi Arabia",
 };

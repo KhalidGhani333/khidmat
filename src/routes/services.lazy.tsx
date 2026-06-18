@@ -87,13 +87,13 @@ function ServicesPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-navy text-navy-foreground pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+      <section className="relative bg-navy text-navy-foreground pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_20%,oklch(0.78_0.15_95/0.4),transparent_50%)]" />
         <div className="container-luxe relative">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("services.offer.label")}</span>
-            <h1 className="mt-4 font-display text-5xl md:text-7xl font-black text-balance">{t("services.hero.title")}</h1>
-            <p className="mt-5 text-xl md:text-2xl text-gold font-display italic">{t("services.hero.sub")}</p>
+            <h1 className="mt-4 font-display text-4xl md:text-6xl font-black text-balance">{t("services.hero.title")}</h1>
+            <p className="mt-5 text-lg md:text-xl text-gold font-display italic">{t("services.hero.sub")}</p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-4 text-sm font-semibold text-gold-foreground transition hover:scale-105">
                 <MessageCircle className="h-5 w-5" /> {t("footer.quote")}
@@ -107,11 +107,11 @@ function ServicesPage() {
       </section>
 
       {/* ALL SERVICES GRID */}
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="container-luxe">
           <Reveal className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("services.all.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("services.all.title")}</h2>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-black">{t("services.all.title")}</h2>
           </Reveal>
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {allServices.map((s, i) => (
@@ -130,11 +130,11 @@ function ServicesPage() {
       </section>
 
       {/* WHAT WE OFFER */}
-      <section className="py-24 md:py-32 bg-muted/40">
+      <section className="py-16 md:py-24 bg-muted/40">
         <div className="container-luxe">
           <Reveal className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("services.offer.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("services.offer.title")}</h2>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-black">{t("services.offer.title")}</h2>
           </Reveal>
           <div className="mt-14 grid gap-x-10 gap-y-5 md:grid-cols-2">
             {benefits.map((b, i) => (
@@ -152,11 +152,11 @@ function ServicesPage() {
       </section>
 
       {/* SURFACES */}
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="container-luxe">
           <Reveal className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("services.special.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("services.special.title")}</h2>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-black">{t("services.special.title")}</h2>
           </Reveal>
           <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {surfaces.map((s, i) => (
@@ -182,11 +182,11 @@ function ServicesPage() {
       </section>
 
       {/* PROCESS */}
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="container-luxe">
           <Reveal className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("services.process.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("services.process.title")}</h2>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-black">{t("services.process.title")}</h2>
           </Reveal>
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {steps.map((s, i) => (
@@ -208,11 +208,11 @@ function ServicesPage() {
       </section>
 
       {/* EQUIPMENT */}
-      <section className="bg-navy text-navy-foreground py-24 md:py-32">
+      <section className="bg-navy text-navy-foreground py-16 md:py-24">
         <div className="container-luxe">
           <Reveal className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("services.equip.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("services.equip.title")}</h2>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-black">{t("services.equip.title")}</h2>
           </Reveal>
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {equipment.map((e, i) => (
@@ -239,11 +239,11 @@ function ServicesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="container-luxe max-w-3xl">
           <Reveal className="text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("faq.label")}</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-black">{t("services.faq.title")}</h2>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-black">{t("services.faq.title")}</h2>
           </Reveal>
           <Reveal>
             <Accordion type="single" collapsible className="mt-12">
@@ -259,7 +259,7 @@ function ServicesPage() {
       </section>
 
       {/* EDUCATIONAL SECTION (NEW) */}
-      <section className="bg-muted/40 py-24 md:py-32">
+      <section className="bg-muted/40 py-16 md:py-24">
         <div className="container-luxe">
           <div className="grid gap-12 lg:grid-cols-2">
             <Reveal>

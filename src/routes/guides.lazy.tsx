@@ -69,7 +69,7 @@ function GuidesPage() {
       </section>
 
       {/* FEATURED GUIDES */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-20">
         <div className="container-luxe">
           <div className="grid gap-8 lg:grid-cols-3">
             {mainGuides.map((guide, i) => (
