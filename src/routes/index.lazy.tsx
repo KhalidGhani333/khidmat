@@ -323,22 +323,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* INFORMATION BANNER (NEW) */}
-      <section className="bg-gold/5 py-12 md:py-16 border-y border-gold/10">
-        <div className="container-luxe text-center">
-          <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{t("experts.label")}</span>
-            <h2 className="mt-3 font-display text-xl md:text-3xl font-black">{t("experts.title")}</h2>
-            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
-              {t("experts.desc")}
-            </p>
-            <Link to="/guides" className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-gold px-7 py-2.5 text-sm font-bold text-gold transition hover:bg-gold hover:text-gold-foreground">
-              {t("experts.link")} <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
       {/* CONTACT FORM */}
       <section className="py-12 md:py-20 bg-background">
         <div className="container-luxe max-w-4xl mx-auto">

@@ -21,7 +21,10 @@ export function Navbar() {
   const links = [
     { to: "/", label: t("nav.home") },
     { to: "/services", label: t("nav.services") },
-    { to: "/guides", label: t("nav.guides") },
+    { to: "/tile-marble-polishing", label: t("nav.tileMarble") },
+    { to: "/ceramic-porcelain", label: t("nav.ceramicPorcelain") },
+    { to: "/project-exhibition", label: t("nav.projects") },
+    { to: "/about-us", label: t("nav.about") },
     { to: "/contact", label: t("nav.contact") },
   ];
 
@@ -36,20 +39,38 @@ export function Navbar() {
     >
       <div className="container-luxe flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logoImg} alt="Khidmat Logo" className="h-10 w-10 rounded-full object-cover border border-gold" />
+          <img
+            src={logoImg}
+            alt="Khidmat Logo"
+            className="h-10 w-10 rounded-full object-cover border border-gold"
+          />
           <div className="leading-tight">
-            <div className={cn("font-display font-black text-xl tracking-tight", scrolled ? "text-foreground" : "text-white")}>{t("site.name")}</div>
-            <div className={cn("text-[10px] uppercase tracking-[0.2em]", scrolled ? "text-muted-foreground" : "text-white/70")}>{t("tagline")}</div>
+            <div
+              className={cn(
+                "font-display font-black text-xl tracking-tight",
+                scrolled ? "text-foreground" : "text-white",
+              )}
+            >
+              {t("site.name")}
+            </div>
+            <div
+              className={cn(
+                "text-[10px] uppercase tracking-[0.2em]",
+                scrolled ? "text-muted-foreground" : "text-white/70",
+              )}
+            >
+              {t("tagline")}
+            </div>
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-5">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-gold",
+                "text-xs xl:text-sm font-medium transition-colors hover:text-gold whitespace-nowrap",
                 scrolled ? "text-foreground" : "text-white",
               )}
               activeProps={{ className: "text-gold" }}
@@ -64,7 +85,9 @@ export function Navbar() {
             onClick={() => setLang(lang === "en" ? "ar" : "en")}
             className={cn(
               "hidden sm:inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-semibold transition",
-              scrolled ? "border-border text-foreground hover:border-gold" : "border-white/30 text-white hover:border-gold",
+              scrolled
+                ? "border-border text-foreground hover:border-gold"
+                : "border-white/30 text-white hover:border-gold",
             )}
             aria-label="Toggle language"
           >
@@ -75,7 +98,9 @@ export function Navbar() {
             onClick={toggleTheme}
             className={cn(
               "hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full border transition",
-              scrolled ? "border-border text-foreground hover:border-gold" : "border-white/30 text-white hover:border-gold",
+              scrolled
+                ? "border-border text-foreground hover:border-gold"
+                : "border-white/30 text-white hover:border-gold",
             )}
             aria-label="Toggle theme"
           >
@@ -129,7 +154,10 @@ export function Navbar() {
                 >
                   {lang === "en" ? "العربية" : "English"}
                 </button>
-                <button onClick={toggleTheme} className="h-10 w-10 rounded-full border border-border flex items-center justify-center">
+                <button
+                  onClick={toggleTheme}
+                  className="h-10 w-10 rounded-full border border-border flex items-center justify-center"
+                >
                   {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                 </button>
               </div>

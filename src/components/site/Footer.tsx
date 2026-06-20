@@ -35,7 +35,10 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-white/70">
             <li><Link to="/" className="hover:text-gold">{t("nav.home")}</Link></li>
             <li><Link to="/services" className="hover:text-gold">{t("nav.services")}</Link></li>
-            <li><Link to="/guides" className="hover:text-gold">{t("nav.guides")}</Link></li>
+            <li><Link to="/tile-marble-polishing" className="hover:text-gold">{t("nav.tileMarble")}</Link></li>
+            <li><Link to="/ceramic-porcelain" className="hover:text-gold">{t("nav.ceramicPorcelain")}</Link></li>
+            <li><Link to="/project-exhibition" className="hover:text-gold">{t("nav.projects")}</Link></li>
+            <li><Link to="/about-us" className="hover:text-gold">{t("nav.about")}</Link></li>
             <li><Link to="/contact" className="hover:text-gold">{t("nav.contact")}</Link></li>
           </ul>
         </div>

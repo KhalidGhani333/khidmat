@@ -13,6 +13,7 @@ import s3 from "@/assets/3.jpeg";
 import s4 from "@/assets/4.jpeg";
 import s5 from "@/assets/5.jpeg";
 import s6 from "@/assets/6.jpeg";
+import s18 from "@/assets/18.jpeg";
 
 // Equipment Images
 import t1 from "@/assets/tool 1.jpg";
@@ -43,19 +44,17 @@ function ServicesPage() {
   const allServices = [
     { icon: Sparkles, title: t("service.marble.title"), desc: t("service.marble.desc") },
     { icon: Layers, title: t("service.tile.title"), desc: t("service.tile.desc") },
-    { icon: ArrowUpDown, title: t("service.stairs.title"), desc: t("service.stairs.desc") },
     { icon: Droplets, title: t("service.ceramic.title"), desc: t("service.ceramic.desc") },
     { icon: Home, title: t("service.courtyard.title"), desc: t("service.courtyard.desc") },
     { icon: Building2, title: t("service.tanks.title"), desc: t("service.tanks.desc") },
   ];
 
   const surfaces = [
-    { title: t("surface.marble"), img: s1 },
-    { title: t("surface.granite"), img: s4 },
-    { title: t("surface.tile"), img: s2 },
-    { title: t("surface.stairs"), img: s3 },
-    { title: t("surface.bathroom"), img: s5 },
-    { title: t("surface.courtyard"), img: s6 },
+    { title: t("surface.marble"), img: s1 }, // 1.jpeg
+    { title: t("surface.granite"), img: s18 }, // 18.jpeg
+    { title: t("surface.tile"), img: s2 }, // 2.jpeg
+    { title: t("surface.bathroom"), img: s5 }, // 5.jpeg
+    { title: t("surface.courtyard"), img: s6 }, // 6.jpeg
   ];
 
 

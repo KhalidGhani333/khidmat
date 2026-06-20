@@ -9,16 +9,34 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TileMarblePolishingRouteImport } from './routes/tile-marble-polishing'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ProjectExhibitionRouteImport } from './routes/project-exhibition'
 import { Route as GuidesRouteImport } from './routes/guides'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CeramicPorcelainRouteImport } from './routes/ceramic-porcelain'
+import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TileMarblePolishingRoute = TileMarblePolishingRouteImport.update({
+  id: '/tile-marble-polishing',
+  path: '/tile-marble-polishing',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/tile-marble-polishing.lazy').then((d) => d.Route),
+)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/services.lazy').then((d) => d.Route))
+const ProjectExhibitionRoute = ProjectExhibitionRouteImport.update({
+  id: '/project-exhibition',
+  path: '/project-exhibition',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/project-exhibition.lazy').then((d) => d.Route),
+)
 const GuidesRoute = GuidesRouteImport.update({
   id: '/guides',
   path: '/guides',
@@ -29,6 +47,18 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/contact.lazy').then((d) => d.Route))
+const CeramicPorcelainRoute = CeramicPorcelainRouteImport.update({
+  id: '/ceramic-porcelain',
+  path: '/ceramic-porcelain',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/ceramic-porcelain.lazy').then((d) => d.Route),
+)
+const AboutUsRoute = AboutUsRouteImport.update({
+  id: '/about-us',
+  path: '/about-us',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/about-us.lazy').then((d) => d.Route))
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,45 +67,100 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
+  '/ceramic-porcelain': typeof CeramicPorcelainRoute
   '/contact': typeof ContactRoute
   '/guides': typeof GuidesRoute
+  '/project-exhibition': typeof ProjectExhibitionRoute
   '/services': typeof ServicesRoute
+  '/tile-marble-polishing': typeof TileMarblePolishingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
+  '/ceramic-porcelain': typeof CeramicPorcelainRoute
   '/contact': typeof ContactRoute
   '/guides': typeof GuidesRoute
+  '/project-exhibition': typeof ProjectExhibitionRoute
   '/services': typeof ServicesRoute
+  '/tile-marble-polishing': typeof TileMarblePolishingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
+  '/ceramic-porcelain': typeof CeramicPorcelainRoute
   '/contact': typeof ContactRoute
   '/guides': typeof GuidesRoute
+  '/project-exhibition': typeof ProjectExhibitionRoute
   '/services': typeof ServicesRoute
+  '/tile-marble-polishing': typeof TileMarblePolishingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/guides' | '/services'
+  fullPaths:
+    | '/'
+    | '/about-us'
+    | '/ceramic-porcelain'
+    | '/contact'
+    | '/guides'
+    | '/project-exhibition'
+    | '/services'
+    | '/tile-marble-polishing'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/guides' | '/services'
-  id: '__root__' | '/' | '/contact' | '/guides' | '/services'
+  to:
+    | '/'
+    | '/about-us'
+    | '/ceramic-porcelain'
+    | '/contact'
+    | '/guides'
+    | '/project-exhibition'
+    | '/services'
+    | '/tile-marble-polishing'
+  id:
+    | '__root__'
+    | '/'
+    | '/about-us'
+    | '/ceramic-porcelain'
+    | '/contact'
+    | '/guides'
+    | '/project-exhibition'
+    | '/services'
+    | '/tile-marble-polishing'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutUsRoute: typeof AboutUsRoute
+  CeramicPorcelainRoute: typeof CeramicPorcelainRoute
   ContactRoute: typeof ContactRoute
   GuidesRoute: typeof GuidesRoute
+  ProjectExhibitionRoute: typeof ProjectExhibitionRoute
   ServicesRoute: typeof ServicesRoute
+  TileMarblePolishingRoute: typeof TileMarblePolishingRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tile-marble-polishing': {
+      id: '/tile-marble-polishing'
+      path: '/tile-marble-polishing'
+      fullPath: '/tile-marble-polishing'
+      preLoaderRoute: typeof TileMarblePolishingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/project-exhibition': {
+      id: '/project-exhibition'
+      path: '/project-exhibition'
+      fullPath: '/project-exhibition'
+      preLoaderRoute: typeof ProjectExhibitionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/guides': {
@@ -92,6 +177,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ceramic-porcelain': {
+      id: '/ceramic-porcelain'
+      path: '/ceramic-porcelain'
+      fullPath: '/ceramic-porcelain'
+      preLoaderRoute: typeof CeramicPorcelainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about-us': {
+      id: '/about-us'
+      path: '/about-us'
+      fullPath: '/about-us'
+      preLoaderRoute: typeof AboutUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -104,9 +203,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutUsRoute: AboutUsRoute,
+  CeramicPorcelainRoute: CeramicPorcelainRoute,
   ContactRoute: ContactRoute,
   GuidesRoute: GuidesRoute,
+  ProjectExhibitionRoute: ProjectExhibitionRoute,
   ServicesRoute: ServicesRoute,
+  TileMarblePolishingRoute: TileMarblePolishingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
