@@ -117,7 +117,6 @@ const dict: Record<string, { en: string; ar: string }> = {
   "gallery.view": { en: "View", ar: "عرض" },
   "why.label": { en: "OUR ADVANTAGE", ar: "ميزتنا" },
   "why.title": { en: "Why Choose Us", ar: "لماذا تختارنا" },
-  "testi.title": { en: "What Clients Say", ar: "آراء عملائنا" },
   "finalcta.title": { en: "Ready to Transform Your Space?", ar: "هل أنت مستعد لتحويل مساحتك؟" },
   "finalcta.sub": {
     en: "Free inspection and quote available across all Riyadh",
