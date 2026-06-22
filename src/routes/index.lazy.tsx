@@ -86,7 +86,7 @@ function HomePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/55 to-navy/85" />
         </div>
-        <div className="container-luxe relative z-10 pt-32 pb-20">
+        <div className="container-luxe relative z-10 pt-32 pb-20 lg:pl-8 xl:pl-16">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
             <span className="inline-flex items-center rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold">
               {t("hero.badge")}
