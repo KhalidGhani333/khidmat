@@ -71,7 +71,7 @@ export function WhatsAppFloat() {
       aria-label="WhatsApp"
       className="fixed bottom-6 right-6 z-40 flex h-14 items-center gap-2 rounded-full bg-[#25D366] px-4 text-white shadow-xl animate-pulse-gold transition hover:scale-105"
     >
-      <span className="text-sm font-semibold whitespace-nowrap">{CONTACT.phone}</span>
+      <span className="text-sm font-semibold whitespace-nowrap">WhatsApp</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-6 w-6 shrink-0 fill-white">
         <path d="M16 .5C7.44.5.5 7.44.5 16c0 2.83.74 5.49 2.03 7.8L.5 31.5l7.93-2.07A15.44 15.44 0 0 0 16 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5zm0 28.3a13.2 13.2 0 0 1-6.73-1.84l-.48-.29-4.71 1.23 1.26-4.6-.31-.5A13.2 13.2 0 0 1 2.8 16C2.8 9.27 8.27 3.8 16 3.8S29.2 9.27 29.2 16 23.73 28.8 16 28.8zm7.24-9.87c-.4-.2-2.35-1.16-2.71-1.29-.37-.13-.63-.2-.9.2s-1.03 1.29-1.26 1.56c-.23.26-.46.3-.86.1-.4-.2-1.68-.62-3.2-1.98-1.18-1.05-1.98-2.35-2.21-2.75-.23-.4-.02-.62.17-.82.18-.18.4-.46.6-.69.2-.23.26-.4.4-.66.13-.27.06-.5-.03-.7-.1-.2-.9-2.16-1.23-2.96-.32-.78-.65-.67-.9-.68h-.76c-.27 0-.7.1-1.06.5s-1.4 1.36-1.4 3.32 1.43 3.85 1.63 4.12c.2.26 2.82 4.3 6.83 6.03.95.41 1.7.66 2.28.84.96.3 1.83.26 2.52.16.77-.12 2.35-.96 2.68-1.88.33-.93.33-1.72.23-1.89-.1-.16-.36-.26-.76-.46z"/>
       </svg>

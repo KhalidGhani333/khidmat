@@ -109,10 +109,10 @@ function HomePage() {
                 >
                   {isLast && part.includes("-") ? (
                      <span className="block mt-4">
-                        <span className="text-white/90 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase tracking-wide">
+                        <span className="block text-white/90 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase tracking-wide">
                           {part.split("-")[0].trim()}
                         </span>
-                        <span className="relative inline-block ml-3 text-gold drop-shadow-[0_0_20px_rgba(201,180,0,0.5)]">
+                        <span className="relative inline-block mt-2 text-gold drop-shadow-[0_0_20px_rgba(201,180,0,0.5)]">
                           <span className="relative z-10 italic font-display text-xl sm:text-2xl lg:text-3xl">— {part.split("-")[1].trim()}</span>
                           <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-gold/10 -rotate-1 z-0 rounded-full blur-[2px]" />
                         </span>
