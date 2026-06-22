@@ -113,7 +113,7 @@ export function Navbar() {
             className="hidden md:inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-gold-foreground shadow-lg shadow-gold/20 transition hover:scale-105"
           >
             <Phone className="h-4 w-4" />
-            {t("nav.cta")}
+            {CONTACT.phone}
           </a>
           <button
             className={cn(
@@ -168,7 +168,7 @@ export function Navbar() {
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-semibold text-gold-foreground"
               >
                 <Phone className="h-4 w-4" />
-                {t("nav.cta")}
+                {CONTACT.phone}
               </a>
             </div>
           </motion.div>
