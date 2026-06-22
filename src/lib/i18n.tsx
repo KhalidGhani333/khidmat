@@ -38,7 +38,7 @@ const dict: Record<string, { en: string; ar: string }> = {
     ar: "خدمات جلي وتلميع الرخام والبلاط. تنظيف السيراميك والبورسلان للأحواش والأسطح والحمامات والخزانات والمطابخ.",
   },
   "cta.whatsapp": { en: "Get Free Quote on WhatsApp", ar: "احصل على عرض مجاني عبر واتساب" },
-  "cta.call": { en: "Call Now +966 53 650 8959", ar: "اتصل الآن +966 53 650 8959" },
+  "cta.call": { en: "Call Now +966 53 650 8959", ar: "اتصل الآن ‎+966 53 650 8959" },
   "cta.whatsappShort": { en: "WhatsApp Us Now", ar: "راسلنا عبر واتساب" },
   "cta.bookService": { en: "Book Service", ar: "احجز الخدمة" },
 

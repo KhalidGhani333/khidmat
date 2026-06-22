@@ -46,7 +46,7 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wider text-gold mb-4">{t("footer.contact")}</h4>
           <ul className="space-y-3 text-sm text-white/70">
-            <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5 shrink-0 text-gold" /> {CONTACT.phone}</li>
+            <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5 shrink-0 text-gold" /> <span dir="ltr">{CONTACT.phone}</span></li>
             <li className="flex items-start gap-3"><Mail className="h-4 w-4 mt-0.5 shrink-0 text-gold" /> <span className="break-all">{CONTACT.email}</span></li>
             <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 shrink-0 text-gold" /> {CONTACT.location}</li>
           </ul>

@@ -60,7 +60,7 @@ function ContactPage() {
                     <c.icon className="h-6 w-6" />
                   </div>
                   <div className="mt-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">{c.label}</div>
-                  <div className="mt-1 font-medium text-foreground break-all">{c.value}</div>
+                  <div className="mt-1 font-medium text-foreground break-all" dir="ltr">{c.value}</div>
                 </div>
               );
               return c.href ? <a key={c.label} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">{Inner}</a> : <div key={c.label}>{Inner}</div>;
