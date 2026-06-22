@@ -96,36 +96,45 @@ function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.8 }}
-            className="mt-6 max-w-4xl font-display text-3xl font-black leading-[1.1] text-white sm:text-4xl lg:text-5xl text-balance tracking-tight"
+            className="mt-6 max-w-4xl font-display font-black leading-tight text-white tracking-tight"
           >
-            {t("hero.title").split(",").map((part, i, arr) => {
-              const isLast = i === arr.length - 1;
-              return (
-                <motion.span 
-                  key={i} 
-                  initial={{ opacity: 0, y: 20 }} 
-                  animate={{ opacity: 1, y: 0 }} 
-                  transition={{ delay: 0.4 + i * 0.1 }} 
-                  className="inline-block"
-                >
-                  {isLast && part.includes("-") ? (
-                     <span className="block mt-4">
-                        <span className="block text-white/90 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase tracking-wide">
-                          {part.split("-")[0].trim()}
-                        </span>
-                        <span className="relative inline-block mt-2 text-gold drop-shadow-[0_0_20px_rgba(201,180,0,0.5)]">
-                          <span className="relative z-10 italic font-display text-xl sm:text-2xl lg:text-3xl">— {part.split("-")[1].trim()}</span>
-                          <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-gold/10 -rotate-1 z-0 rounded-full blur-[2px]" />
-                        </span>
-                     </span>
-                  ) : (
-                    <span className={`${i % 2 === 1 ? 'text-gold' : 'text-white'} drop-shadow-lg`}>
-                      {part.trim()}{!isLast ? ", " : ""}
-                    </span>
-                  )}
+            {lang === "ar" ? (
+              <>
+                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="block text-3xl sm:text-4xl lg:text-5xl">
+                  <span className="text-white">جلي بلاط، </span>
+                  <span className="text-gold drop-shadow-[0_0_20px_rgba(201,180,0,0.4)]">تلميع رخام،</span>
                 </motion.span>
-              );
-            })}
+                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="block text-3xl sm:text-4xl lg:text-5xl mt-1">
+                  <span className="text-white">تنظيف سيراميك وبورسلان،</span>
+                </motion.span>
+                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="block text-xl sm:text-2xl lg:text-3xl font-extrabold uppercase tracking-widest text-white/80 mt-3">
+                  أسطح وخزانات
+                </motion.span>
+                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="block text-3xl sm:text-4xl lg:text-5xl mt-1">
+                  <span className="text-gold drop-shadow-[0_0_20px_rgba(201,180,0,0.4)]">حوش، </span>
+                  <span className="text-white">سطح، </span>
+                  <span className="text-gold italic drop-shadow-[0_0_20px_rgba(201,180,0,0.5)]">— أرشد</span>
+                </motion.span>
+              </>
+            ) : (
+              <>
+                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="block text-3xl sm:text-4xl lg:text-5xl">
+                  <span className="text-white">Tile polishing, </span>
+                  <span className="text-gold drop-shadow-[0_0_20px_rgba(201,180,0,0.4)]">marble polishing,</span>
+                </motion.span>
+                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="block text-3xl sm:text-4xl lg:text-5xl mt-1">
+                  <span className="text-white">ceramic and porcelain cleaning,</span>
+                </motion.span>
+                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="block text-xl sm:text-2xl lg:text-3xl font-extrabold uppercase tracking-widest text-white/80 mt-3">
+                  and water tanks
+                </motion.span>
+                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="block text-3xl sm:text-4xl lg:text-5xl mt-1">
+                  <span className="text-gold drop-shadow-[0_0_20px_rgba(201,180,0,0.4)]">yard, </span>
+                  <span className="text-white">roof, </span>
+                  <span className="text-gold italic drop-shadow-[0_0_20px_rgba(201,180,0,0.5)]">—Arshad</span>
+                </motion.span>
+              </>
+            )}
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="mt-6 max-w-2xl text-base md:text-lg text-white/85 leading-relaxed font-medium drop-shadow-sm">
             {t("hero.sub")}
