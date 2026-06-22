@@ -107,8 +107,8 @@ function HomePage() {
                 <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="block text-3xl sm:text-4xl lg:text-5xl mt-1">
                   <span className="text-white">تنظيف سيراميك وبورسلان،</span>
                 </motion.span>
-                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="block text-xl sm:text-2xl lg:text-3xl font-extrabold uppercase tracking-widest text-white/80 mt-3">
-                  أسطح وخزانات
+                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="block text-3xl sm:text-4xl lg:text-5xl mt-1">
+                  <span className="text-white">أسطح وخزانات،</span>
                 </motion.span>
                 <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="block text-3xl sm:text-4xl lg:text-5xl mt-1">
                   <span className="text-gold drop-shadow-[0_0_20px_rgba(201,180,0,0.4)]">حوش، </span>
@@ -125,8 +125,8 @@ function HomePage() {
                 <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="block text-3xl sm:text-4xl lg:text-5xl mt-1">
                   <span className="text-white">ceramic and porcelain cleaning,</span>
                 </motion.span>
-                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="block text-xl sm:text-2xl lg:text-3xl font-extrabold uppercase tracking-widest text-white/80 mt-3">
-                  and water tanks
+                <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="block text-3xl sm:text-4xl lg:text-5xl mt-1">
+                  <span className="text-white">and water tanks,</span>
                 </motion.span>
                 <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="block text-3xl sm:text-4xl lg:text-5xl mt-1">
                   <span className="text-gold drop-shadow-[0_0_20px_rgba(201,180,0,0.4)]">yard, </span>
