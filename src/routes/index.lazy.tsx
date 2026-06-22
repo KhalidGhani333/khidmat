@@ -26,6 +26,7 @@ import g8 from "@/assets/8.jpeg";
 import g9 from "@/assets/9.jpeg";
 import g15 from "@/assets/15.jpeg";
 import g16 from "@/assets/16.jpeg";
+import g18 from "@/assets/18.jpeg";
 
 // Service Circular Images
 import s01 from "@/assets/01.png";
@@ -62,7 +63,7 @@ function HomePage() {
     { icon: Wallet, title: t("feature.price.title"), desc: t("feature.price.desc") },
   ];
 
-  const gallery = [g1, g2, g3, g4, g5, g6, g7, g8, g9];
+  const gallery = [g1, g2, g3, g4, g5, g6, g7, g8, g9, g15, g18];
 
   const ba = [
     { after: g2, id: "ba1" },
