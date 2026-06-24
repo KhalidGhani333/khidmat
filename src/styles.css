@@ -33,7 +33,7 @@
   --color-gold-foreground: var(--gold-foreground);
   --color-navy: var(--navy);
   --color-navy-foreground: var(--navy-foreground);
-  --font-display: "Playfair Display", serif;
+  --font-display: "Roboto", sans-serif;
   --font-sans: "Inter", sans-serif;
   --font-arabic: "Cairo", sans-serif;
 }
@@ -96,9 +96,9 @@
     font-family: var(--font-sans);
     transition: background-color 0.3s ease, color 0.3s ease;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; text-transform: capitalize; }
   [dir="rtl"] body { font-family: var(--font-arabic); }
-  [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4 { font-family: var(--font-arabic); }
+  [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4 { font-family: var(--font-arabic); text-transform: none; }
 }
 
 @utility container-luxe {
